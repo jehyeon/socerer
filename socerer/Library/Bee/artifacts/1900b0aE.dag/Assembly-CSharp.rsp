@@ -334,8 +334,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Contants.cs"
+"Assets/Scripts/MainMenuUI.cs"
 "Assets/Scripts/Movement2D.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/PlayerSettings.cs"
+"Assets/Scripts/SettingUI.cs"
 -langversion:8.0
 
 /deterministic
