@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
 public class CreateRoomUI : MonoBehaviour
 {
@@ -25,6 +26,13 @@ public class CreateRoomUI : MonoBehaviour
     private void UpdateTemporaryImgs()
     {
 
+    }
+
+    public void CreateRoom()
+    {
+        var manager = RoomManager.singleton;
+        // ¹æ ¼³Á¤
+        manager.StartHost();
     }
 }
 

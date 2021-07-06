@@ -1,0 +1,1926 @@
+fileFormatVersion: 2
+guid: 20cb21fd4b2264d438fe24a908fcc7e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7007325575996864335
+    second: green mage motion1-1_1
+  - first:
+      213: -4595471216707719860
+    second: green mage motion1-1_2
+  - first:
+      213: 1568721070944317263
+    second: green mage motion1-1_3
+  - first:
+      213: -6630797583472017602
+    second: green mage motion1-1_4
+  - first:
+      213: -1518597249570542653
+    second: green mage motion1-1_5
+  - first:
+      213: -6913835649851304472
+    second: green mage motion1-1_6
+  - first:
+      213: -3057293576645953410
+    second: green mage motion1-1_7
+  - first:
+      213: -8772926289142566781
+    second: green mage motion1-1_8
+  - first:
+      213: 4423608709763404562
+    second: green mage motion1-1_9
+  - first:
+      213: 3663010789098402545
+    second: green mage motion1-1_10
+  - first:
+      213: 85101292603346950
+    second: green mage motion1-1_11
+  - first:
+      213: -1717751512851064486
+    second: green mage motion1-1_12
+  - first:
+      213: -1179435127240753099
+    second: green mage motion1-1_13
+  - first:
+      213: 3606880358341097377
+    second: green mage motion1-1_14
+  - first:
+      213: 135417467542841167
+    second: green mage motion1-1_15
+  - first:
+      213: -3462925265040357750
+    second: green mage motion1-1_16
+  - first:
+      213: 6868912474151447642
+    second: green mage motion1-1_17
+  - first:
+      213: -8286219828377531183
+    second: green mage motion1-1_18
+  - first:
+      213: 7390258594809396693
+    second: green mage motion1-1_19
+  - first:
+      213: -5544268937514934818
+    second: green mage motion1-1_20
+  - first:
+      213: -2605991715094979572
+    second: green mage motion1-1_21
+  - first:
+      213: 2208473750397063011
+    second: green mage motion1-1_22
+  - first:
+      213: -3401931829913621804
+    second: green mage motion1-1_23
+  - first:
+      213: -6909605503077978369
+    second: green mage motion1-1_24
+  - first:
+      213: -2028681869332158804
+    second: green mage motion1-1_25
+  - first:
+      213: 9218601008475649408
+    second: green mage motion1-1_26
+  - first:
+      213: -2775250515878314432
+    second: green mage motion1-1_27
+  - first:
+      213: -4278796953719306673
+    second: green mage motion1-1_28
+  - first:
+      213: 8246000448763266181
+    second: green mage motion1-1_29
+  - first:
+      213: 8280014108420697309
+    second: green mage motion1-1_30
+  - first:
+      213: -440366394174980443
+    second: green mage motion1-1_31
+  - first:
+      213: -4837390419147677916
+    second: green mage motion1-1_32
+  - first:
+      213: -4247809915420401787
+    second: green mage motion1-1_33
+  - first:
+      213: 3092586145914336157
+    second: green mage motion1-1_34
+  - first:
+      213: 7469531911519357616
+    second: green mage motion1-1_35
+  - first:
+      213: 7956544088340783301
+    second: green mage motion1-1_36
+  - first:
+      213: -8584235271433146597
+    second: green mage motion1-1_37
+  - first:
+      213: 8349484422095708279
+    second: green mage motion1-1_38
+  - first:
+      213: -4071502122563834507
+    second: green mage motion1-1_39
+  - first:
+      213: 1747596716552513536
+    second: green mage motion1-1_40
+  - first:
+      213: -1157926406711022570
+    second: green mage motion1-1_41
+  - first:
+      213: 1570048034312172197
+    second: green mage motion1-1_42
+  - first:
+      213: 4313991224913655464
+    second: green mage motion1-1_43
+  - first:
+      213: -8069051529335456571
+    second: green mage motion1-1_44
+  - first:
+      213: 5731172643616493754
+    second: green mage motion1-1_45
+  - first:
+      213: -694136865921786514
+    second: green mage motion1-1_46
+  - first:
+      213: 8292537024569355932
+    second: green mage motion1-1_47
+  - first:
+      213: -7391296091200141897
+    second: green mage motion1-1_48
+  - first:
+      213: 5602711105391828633
+    second: green mage motion1-1_49
+  - first:
+      213: -3301727601447248741
+    second: green mage motion1-1_50
+  - first:
+      213: 931205533351077342
+    second: green mage motion1-1_51
+  - first:
+      213: -7782527619899779325
+    second: green mage motion1-1_52
+  - first:
+      213: 158713596702827705
+    second: green mage motion1-1_53
+  - first:
+      213: -1941964975029287030
+    second: green mage motion1-1_54
+  - first:
+      213: -7652098670252572585
+    second: green mage motion1-1_55
+  - first:
+      213: -4336332056621509296
+    second: green mage motion1-1_56
+  - first:
+      213: 6859881254893987180
+    second: green mage motion1-1_57
+  - first:
+      213: -5453487871920907051
+    second: green mage motion1-1_58
+  - first:
+      213: 2865583428306159461
+    second: green mage motion1-1_59
+  - first:
+      213: -3266537141103695071
+    second: green mage motion1-1_60
+  - first:
+      213: 7247420982623100121
+    second: green mage motion1-1_61
+  - first:
+      213: -6306373165620416959
+    second: green mage motion1-1_62
+  - first:
+      213: -5325464885344775452
+    second: green mage motion1-1_63
+  - first:
+      213: 5533795155929242530
+    second: green mage motion1-1_64
+  - first:
+      213: 4714269315812023031
+    second: green mage motion1-1_65
+  - first:
+      213: 4975219044915848233
+    second: green mage motion1-1_66
+  - first:
+      213: 8973626675228622536
+    second: green mage motion1-1_67
+  - first:
+      213: -2493265154648090252
+    second: green mage motion1-1_68
+  - first:
+      213: 4843660105047720924
+    second: green mage motion1-1_69
+  - first:
+      213: -7296217922739095572
+    second: green mage motion1-1_70
+  - first:
+      213: -8277022343232259961
+    second: green mage motion1-1_71
+  - first:
+      213: 6085290570763008075
+    second: green mage motion1-1_72
+  - first:
+      213: -454873498571251153
+    second: green mage motion1-1_73
+  - first:
+      213: -999132593910314096
+    second: green mage motion1-1_74
+  - first:
+      213: -4746813565157203584
+    second: green mage motion1-1_75
+  - first:
+      213: -7255701615746473959
+    second: green mage motion1-1_76
+  - first:
+      213: 3824943711017050934
+    second: green mage motion1-1_77
+  - first:
+      213: -7443585402895348983
+    second: green mage motion1-1_78
+  - first:
+      213: -4091890403914284791
+    second: green mage motion1-1_79
+  - first:
+      213: 3550386584869137648
+    second: green mage motion1-1_80
+  - first:
+      213: -2810125917075083275
+    second: green mage motion1-1_81
+  - first:
+      213: 5315187430451261683
+    second: green mage motion1-1_82
+  - first:
+      213: -8122982094690429245
+    second: green mage motion1-1_83
+  - first:
+      213: 667783485043067308
+    second: green mage motion1-1_84
+  - first:
+      213: 8718954428106296687
+    second: green mage motion1-1_85
+  - first:
+      213: 5029952536541170356
+    second: green mage motion1-1_86
+  - first:
+      213: -363468363161171786
+    second: green mage motion1-1_87
+  - first:
+      213: 6815316085628827465
+    second: green mage motion1-1_88
+  - first:
+      213: 5387406327534424156
+    second: green mage motion1-1_89
+  - first:
+      213: 5248270341300193964
+    second: green mage motion1-1_90
+  - first:
+      213: 1968898044464850984
+    second: green mage motion1-1_91
+  - first:
+      213: -8729377553533168121
+    second: green mage motion1-1_92
+  - first:
+      213: -6550360945663436800
+    second: green mage motion1-1_93
+  - first:
+      213: -117860301010473456
+    second: green mage motion1-1_94
+  - first:
+      213: 5697848780660275194
+    second: green mage motion1-1_95
+  - first:
+      213: -4349943174253457614
+    second: green mage motion1-1_96
+  - first:
+      213: 1690007480506667369
+    second: green mage motion1-1_97
+  - first:
+      213: -5139763212447917311
+    second: green mage motion1-1_98
+  - first:
+      213: 5046334252098776417
+    second: green mage motion1-1_99
+  - first:
+      213: -4799156720186797450
+    second: green mage motion1-1_100
+  - first:
+      213: -4142159213677119433
+    second: green mage motion1-1_101
+  - first:
+      213: 129559962719904964
+    second: green mage motion1-1_102
+  - first:
+      213: -1288569653516637789
+    second: green mage motion1-1_103
+  - first:
+      213: 1485320796127134049
+    second: green mage motion1-1_104
+  - first:
+      213: 4646645533215724132
+    second: green mage motion1-1_105
+  - first:
+      213: 8874633307114831840
+    second: green mage motion1-1_106
+  - first:
+      213: 2830742599356076128
+    second: green mage motion1-1_107
+  - first:
+      213: -3704113475998549740
+    second: green mage motion1-1_108
+  - first:
+      213: -5090545852021168029
+    second: green mage motion1-1_109
+  - first:
+      213: -7678804879966086536
+    second: green mage motion1-1_110
+  - first:
+      213: 6106917514072197378
+    second: green mage motion1-1_111
+  - first:
+      213: 7683948430078532521
+    second: green mage motion1-1_112
+  - first:
+      213: -1009809540066683308
+    second: green mage motion1-1_113
+  - first:
+      213: 1263466793078872160
+    second: green mage motion1-1_114
+  - first:
+      213: 6465413435939792164
+    second: green mage motion1-1_115
+  - first:
+      213: -2627528341627591268
+    second: green mage motion1-1_116
+  - first:
+      213: -3067450906473265210
+    second: green mage motion1-1_117
+  - first:
+      213: 8911544581178604852
+    second: green mage motion1-1_118
+  - first:
+      213: -5507227197055034282
+    second: green mage motion1-1_119
+  - first:
+      213: 8493013521932363884
+    second: green mage motion1-1_120
+  - first:
+      213: -4593994641585084251
+    second: green mage motion1-1_121
+  - first:
+      213: -6288920793668049023
+    second: green mage motion1-1_122
+  - first:
+      213: 7867773667050689022
+    second: green mage motion1-1_123
+  - first:
+      213: -2324364993701861035
+    second: green mage motion1-1_124
+  - first:
+      213: -1030663815888732433
+    second: green mage motion1-1_125
+  - first:
+      213: -4421500025745467345
+    second: green mage motion1-1_126
+  - first:
+      213: -2060160897028693856
+    second: green mage motion1-1_127
+  - first:
+      213: 2390086759994261938
+    second: green mage motion1-1_128
+  - first:
+      213: 2642554207396929985
+    second: green mage motion1-1_129
+  - first:
+      213: 4480146654016030589
+    second: green mage motion1-1_130
+  - first:
+      213: -2735019069983068486
+    second: green mage motion1-1_131
+  - first:
+      213: -3923648900475147392
+    second: green mage motion1-1_132
+  - first:
+      213: 8017934938261216822
+    second: green mage motion1-1_133
+  - first:
+      213: 2892331981595278770
+    second: green mage motion1-1_134
+  - first:
+      213: 3136914428145810602
+    second: green mage motion1-1_135
+  - first:
+      213: -2485327034556802711
+    second: green mage motion1-1_136
+  - first:
+      213: 3812852575384549192
+    second: green mage motion1-1_137
+  - first:
+      213: -5389407638323157257
+    second: green mage motion1-1_138
+  - first:
+      213: 6265550651523177566
+    second: green mage motion1-1_139
+  - first:
+      213: -4774518680820751141
+    second: green mage motion1-1_140
+  - first:
+      213: -1804737127406657375
+    second: green mage motion1-1_141
+  - first:
+      213: 8155778195454181419
+    second: green mage motion1-1_142
+  - first:
+      213: -7693438964156286794
+    second: green mage motion1-1_143
+  - first:
+      213: 5064849425634128634
+    second: green mage motion1-1_144
+  - first:
+      213: 2863729343933389827
+    second: green mage motion1-1_145
+  - first:
+      213: 3534585734682505894
+    second: green mage motion1-1_146
+  - first:
+      213: -3426248088617621261
+    second: green mage motion1-1_147
+  - first:
+      213: -215061597746393379
+    second: green mage motion1-1_148
+  - first:
+      213: -5684387732560965318
+    second: green mage motion1-1_149
+  - first:
+      213: -9032750980992452484
+    second: green mage motion1-1_150
+  - first:
+      213: 7097546892506798139
+    second: green mage motion1-1_151
+  - first:
+      213: -2468356733129252113
+    second: green mage motion1-1_152
+  - first:
+      213: 7599974963847551501
+    second: green mage motion1-1_153
+  - first:
+      213: -1361171881904670394
+    second: green mage motion1-1_154
+  - first:
+      213: -4682224154696671861
+    second: green mage motion1-1_155
+  - first:
+      213: -1824261057993646021
+    second: green mage motion1-1_156
+  - first:
+      213: -3121650978954395489
+    second: green mage motion1-1_157
+  - first:
+      213: -5601625991384497241
+    second: green mage motion1-1_158
+  - first:
+      213: 825532297995841824
+    second: green mage motion1-1_159
+  - first:
+      213: -6786289673996008354
+    second: green mage motion1-1_160
+  - first:
+      213: -2831049360238918143
+    second: green mage motion1-1_161
+  - first:
+      213: 9157218909689755445
+    second: green mage motion1-1_162
+  - first:
+      213: -2586898630966900161
+    second: green mage motion1-1_163
+  - first:
+      213: -4494506244962328689
+    second: green mage motion1-1_164
+  - first:
+      213: -5787254371307300813
+    second: green mage motion1-1_165
+  - first:
+      213: 4458233280060116103
+    second: green mage motion1-1_166
+  - first:
+      213: 3998352933784162946
+    second: green mage motion1-1_167
+  - first:
+      213: 7299390450112709959
+    second: green mage motion1-1_168
+  - first:
+      213: 6904170679764700251
+    second: green mage motion1-1_169
+  - first:
+      213: -2430764221171822606
+    second: green mage motion1-1_170
+  - first:
+      213: -4912386709463006355
+    second: green mage motion1-1_171
+  - first:
+      213: -2963322904202580430
+    second: green mage motion1-1_172
+  - first:
+      213: -676365774517475556
+    second: green mage motion1-1_173
+  - first:
+      213: -2065593655568426804
+    second: green mage motion1-1_174
+  - first:
+      213: -5454367610693685515
+    second: green mage motion1-1_175
+  - first:
+      213: 3349765623514890455
+    second: green mage motion1-1_176
+  - first:
+      213: 8417991015732120369
+    second: green mage motion1-1_177
+  - first:
+      213: -9141732686644663722
+    second: green mage motion1-1_178
+  - first:
+      213: -6154993345527490867
+    second: green mage motion1-1_179
+  - first:
+      213: -4759386110370716793
+    second: green mage motion1-1_180
+  - first:
+      213: 7687361189487785836
+    second: green mage motion1-1_181
+  - first:
+      213: -8540158504295491197
+    second: green mage motion1-1_182
+  - first:
+      213: -8202829390096737119
+    second: green mage motion1-1_183
+  - first:
+      213: -4365017999246073787
+    second: green mage motion1-1_184
+  - first:
+      213: 4479727915816670926
+    second: green mage motion1-1_185
+  - first:
+      213: 7216581321665766885
+    second: green mage motion1-1_186
+  - first:
+      213: -5203081572578123028
+    second: green mage motion1-1_187
+  - first:
+      213: 4833469641030703996
+    second: green mage motion1-1_188
+  - first:
+      213: -3153004728774520518
+    second: green mage motion1-1_189
+  - first:
+      213: 1682930577157607647
+    second: green mage motion1-1_190
+  - first:
+      213: 5456563143792767919
+    second: green mage motion1-1_191
+  - first:
+      213: 4061524276269840000
+    second: green mage motion1-1_192
+  - first:
+      213: -8496831701718148137
+    second: green mage motion1-1_193
+  - first:
+      213: -4241391612786004439
+    second: green mage motion1-1_194
+  - first:
+      213: 6251999003716365568
+    second: green mage motion1-1_195
+  - first:
+      213: 3805643446072993050
+    second: green mage motion1-1_196
+  - first:
+      213: -1277114274548104272
+    second: green mage motion1-1_197
+  - first:
+      213: -6995194345096517413
+    second: green mage motion1-1_198
+  - first:
+      213: -1335212560728869880
+    second: green mage motion1-1_199
+  - first:
+      213: 1722778506429616603
+    second: green mage motion1-1_200
+  - first:
+      213: -473231716048018535
+    second: green mage motion1-1_201
+  - first:
+      213: -5422963351784213104
+    second: green mage motion1-1_202
+  - first:
+      213: -3175472759610737220
+    second: green mage motion1-1_203
+  - first:
+      213: -1812904875928261372
+    second: green mage motion1-1_204
+  - first:
+      213: -1268252352336205498
+    second: green mage motion1-1_205
+  - first:
+      213: 8667420218986829351
+    second: green mage motion1-1_206
+  - first:
+      213: 2355804673524123781
+    second: green mage motion1-1_207
+  - first:
+      213: -653545077193531117
+    second: green mage motion1-1_208
+  - first:
+      213: 4172759649685847767
+    second: green mage motion1-1_209
+  - first:
+      213: -637105831657200495
+    second: green mage motion1-1_210
+  - first:
+      213: -8579949336224923276
+    second: green mage motion1-1_211
+  - first:
+      213: -4515142522368005731
+    second: green mage motion1-1_212
+  - first:
+      213: 3653329951122673093
+    second: green mage motion1-1_213
+  - first:
+      213: 8614877672228998439
+    second: green mage motion1-1_214
+  - first:
+      213: 9104253059524927073
+    second: green mage motion1-1_215
+  - first:
+      213: 4622140433879351287
+    second: green mage motion1-1_216
+  - first:
+      213: 5052170338305779827
+    second: green mage motion1-1_217
+  - first:
+      213: -5303576914574720555
+    second: green mage motion1-1_218
+  - first:
+      213: -6558210848043461166
+    second: green mage motion1-1_219
+  - first:
+      213: 7995896311374387059
+    second: green mage motion1-1_220
+  - first:
+      213: 4479241105721675721
+    second: green mage motion1-1_221
+  - first:
+      213: 8986362898956510273
+    second: green mage motion1-1_222
+  - first:
+      213: -5104962951615968848
+    second: green mage motion1-1_223
+  - first:
+      213: -8773280904332269779
+    second: green mage motion1-1_224
+  - first:
+      213: 6145169914370052333
+    second: green mage motion1-1_225
+  - first:
+      213: 6458479403673079655
+    second: green mage motion1-1_226
+  - first:
+      213: 3752635594711465974
+    second: green mage motion1-1_227
+  - first:
+      213: -8330645070292363746
+    second: green mage motion1-1_228
+  - first:
+      213: 8990999311698473229
+    second: green mage motion1-1_229
+  - first:
+      213: 7485354216805080689
+    second: green mage motion1-1_230
+  - first:
+      213: -9033528234044698746
+    second: green mage motion1-1_231
+  - first:
+      213: -3808411654988875741
+    second: green mage motion1-1_232
+  - first:
+      213: -371526414991954597
+    second: green mage motion1-1_233
+  - first:
+      213: 5631389701931136955
+    second: green mage motion1-1_234
+  - first:
+      213: -2529693038896527366
+    second: green mage motion1-1_235
+  - first:
+      213: 6765232049105445539
+    second: green mage motion1-1_236
+  - first:
+      213: 857387191618755116
+    second: green mage motion1-1_237
+  - first:
+      213: 4196050012157738447
+    second: green mage motion1-1_238
+  - first:
+      213: -7161383942822934130
+    second: green mage motion1-1_239
+  - first:
+      213: -83818758413704889
+    second: green mage motion1-1_240
+  - first:
+      213: -1883171138592720647
+    second: green mage motion1-1_241
+  - first:
+      213: -1704209074777039081
+    second: green mage motion1-1_242
+  - first:
+      213: -7701999758052785255
+    second: green mage motion1-1_243
+  - first:
+      213: -8476964555089194610
+    second: green mage motion1-1_244
+  - first:
+      213: -8128393578576483665
+    second: green mage motion1-1_245
+  - first:
+      213: 7570264727252676208
+    second: green mage motion1-1_246
+  - first:
+      213: 3190702665569614388
+    second: green mage motion1-1_247
+  - first:
+      213: -6506411483922578593
+    second: green mage motion1-1_248
+  - first:
+      213: -6677636530841129807
+    second: green mage motion1-1_249
+  - first:
+      213: 621061439066800837
+    second: green mage motion1-1_250
+  - first:
+      213: -2189966644492909300
+    second: green mage motion1-1_251
+  - first:
+      213: 3496425824699324798
+    second: green mage motion1-1_252
+  - first:
+      213: -8662285004456936015
+    second: green mage motion1-1_253
+  - first:
+      213: 6103935719945439245
+    second: green mage motion1-1_254
+  - first:
+      213: 6160976381698272766
+    second: green mage motion1-1_255
+  - first:
+      213: 4454009551229036638
+    second: green mage motion1-1_256
+  - first:
+      213: -6793408959823157798
+    second: green mage motion1-1_257
+  - first:
+      213: -427155913616594509
+    second: green mage motion1-1_258
+  - first:
+      213: 6424101980358587337
+    second: green mage motion1-1_259
+  - first:
+      213: 4347923989838612238
+    second: green mage motion1-1_260
+  - first:
+      213: 6610951162036108149
+    second: green mage motion1-1_261
+  - first:
+      213: 4438614945964817383
+    second: green mage motion1-1_262
+  - first:
+      213: -1897801680731939852
+    second: green mage motion1-1_263
+  - first:
+      213: -2304727643886702818
+    second: green mage motion1-1_264
+  - first:
+      213: 7246595345422573050
+    second: green mage motion1-1_265
+  - first:
+      213: 2097519150991834870
+    second: green mage motion1-1_266
+  - first:
+      213: 5647458974515121038
+    second: green mage motion1-1_267
+  - first:
+      213: -4573661762907604110
+    second: green mage motion1-1_268
+  - first:
+      213: 7033262830650102329
+    second: green mage motion1-1_269
+  - first:
+      213: -5789811105535784654
+    second: green mage motion1-1_270
+  - first:
+      213: 595379442304337262
+    second: green mage motion1-1_271
+  - first:
+      213: -8141815325678189168
+    second: green mage motion1-1_272
+  - first:
+      213: 5213852080744493070
+    second: green mage motion1-1_273
+  - first:
+      213: 3043406737998562236
+    second: green mage motion1-1_274
+  - first:
+      213: -113131453139885564
+    second: green mage motion1-1_275
+  - first:
+      213: 1612404416245095007
+    second: green mage motion1-1_276
+  - first:
+      213: -9052916570987858555
+    second: green mage motion1-1_277
+  - first:
+      213: -4110381569880709093
+    second: green mage motion1-1_278
+  - first:
+      213: -8428324339857976189
+    second: green mage motion1-1_279
+  - first:
+      213: -2567949633035731989
+    second: green mage motion1-1_280
+  - first:
+      213: 4951856987307574285
+    second: green mage motion1-1_281
+  - first:
+      213: -1783418063158226738
+    second: green mage motion1-1_282
+  - first:
+      213: 5177724725776065395
+    second: green mage motion1-1_283
+  - first:
+      213: -9038976038421500441
+    second: green mage motion1-1_284
+  - first:
+      213: -2560260540132524813
+    second: green mage motion1-1_285
+  - first:
+      213: -6303494752472081816
+    second: green mage motion1-1_286
+  - first:
+      213: 8994853147899056449
+    second: green mage motion1-1_287
+  - first:
+      213: -7881807167719828979
+    second: green mage motion1-1_288
+  - first:
+      213: 8558161220760491956
+    second: green mage motion1-1_289
+  - first:
+      213: -7311537854472018197
+    second: green mage motion1-1_290
+  - first:
+      213: 4382416272069628866
+    second: green mage motion1-1_291
+  - first:
+      213: -6872002667024679775
+    second: green mage motion1-1_292
+  - first:
+      213: 7427201478649035063
+    second: green mage motion1-1_293
+  - first:
+      213: -8835016006727211116
+    second: green mage motion1-1_294
+  - first:
+      213: -1308227024969001278
+    second: green mage motion1-1_295
+  - first:
+      213: 1357291604877259620
+    second: green mage motion1-1_296
+  - first:
+      213: 7678044769320300793
+    second: green mage motion1-1_297
+  - first:
+      213: -1856199166922941677
+    second: green mage motion1-1_298
+  - first:
+      213: 6229885268666319945
+    second: green mage motion1-1_299
+  - first:
+      213: 9007718197598033818
+    second: green mage motion1-1_300
+  - first:
+      213: -2264083779901643949
+    second: green mage motion1-1_301
+  - first:
+      213: -8263699565242542366
+    second: green mage motion1-1_302
+  - first:
+      213: -6383990780953652275
+    second: green mage motion1-1_303
+  - first:
+      213: -3695000879137887762
+    second: green mage motion1-1_304
+  - first:
+      213: 3337568777093498170
+    second: green mage motion1-1_305
+  - first:
+      213: 2906861517646285601
+    second: green mage motion1-1_306
+  - first:
+      213: 5765107594808785658
+    second: green mage motion1-1_307
+  - first:
+      213: 8722118974351458780
+    second: green mage motion1-1_308
+  - first:
+      213: 8206820312617620721
+    second: green mage motion1-1_309
+  - first:
+      213: -2814581790444408857
+    second: green mage motion1-1_310
+  - first:
+      213: 3929801298016270561
+    second: green mage motion1-1_311
+  - first:
+      213: 4316777968108518576
+    second: green mage motion1-1_312
+  - first:
+      213: -1070646085188119211
+    second: green mage motion1-1_313
+  - first:
+      213: 7653315017198018220
+    second: green mage motion1-1_314
+  - first:
+      213: -8662349510162055908
+    second: green mage motion1-1_315
+  - first:
+      213: 6287551524529422005
+    second: green mage motion1-1_316
+  - first:
+      213: 6215178947041940032
+    second: green mage motion1-1_317
+  - first:
+      213: -6630863748254293955
+    second: green mage motion1-1_318
+  - first:
+      213: -7844980361256120573
+    second: green mage motion1-1_319
+  - first:
+      213: -3816683720466575076
+    second: green mage motion1-1_320
+  - first:
+      213: 5672807976531029600
+    second: green mage motion1-1_321
+  - first:
+      213: -4756408548568293349
+    second: green mage motion1-1_322
+  - first:
+      213: -6879112033509160373
+    second: green mage motion1-1_323
+  - first:
+      213: 9130716639192617238
+    second: green mage motion1-1_324
+  - first:
+      213: 6880363869087227092
+    second: green mage motion1-1_325
+  - first:
+      213: -1495341434668552294
+    second: green mage motion1-1_326
+  - first:
+      213: -377556308358529002
+    second: green mage motion1-1_327
+  - first:
+      213: -6194934807500270015
+    second: green mage motion1-1_328
+  - first:
+      213: -157928106320861531
+    second: green mage motion1-1_329
+  - first:
+      213: 363126280484402107
+    second: green mage motion1-1_330
+  - first:
+      213: 917847972594327945
+    second: green mage motion1-1_331
+  - first:
+      213: 24207549110235081
+    second: green mage motion1-1_332
+  - first:
+      213: -2373512923624898701
+    second: green mage motion1-1_333
+  - first:
+      213: -4808299196659216160
+    second: green mage motion1-1_334
+  - first:
+      213: -475922486593859184
+    second: green mage motion1-1_335
+  - first:
+      213: -8629066909281735200
+    second: green mage motion1-1_336
+  - first:
+      213: -8093701615422460632
+    second: green mage motion1-1_337
+  - first:
+      213: -7752193949267036931
+    second: green mage motion1-1_338
+  - first:
+      213: -3985364576700588984
+    second: green mage motion1-1_339
+  - first:
+      213: 7557664831748098998
+    second: green mage motion1-1_340
+  - first:
+      213: 8122373055854426175
+    second: green mage motion1-1_341
+  - first:
+      213: 6432109125013720586
+    second: green mage motion1-1_342
+  - first:
+      213: -4274652019536323793
+    second: green mage motion1-1_343
+  - first:
+      213: 6299868138834161065
+    second: green mage motion1-1_344
+  - first:
+      213: 1865431095426526646
+    second: green mage motion1-1_345
+  - first:
+      213: -3134004559233997894
+    second: green mage motion1-1_346
+  - first:
+      213: 3534528190199367685
+    second: green mage motion1-1_347
+  - first:
+      213: -7158889681599779687
+    second: green mage motion1-1_348
+  - first:
+      213: -4669000221067319711
+    second: green mage motion1-1_349
+  - first:
+      213: 7768215812396523418
+    second: green mage motion1-1_350
+  - first:
+      213: -7814873226320250412
+    second: green mage motion1-1_351
+  - first:
+      213: -4899513171565854812
+    second: green mage motion1-1_352
+  - first:
+      213: 2689377569677398725
+    second: green mage motion1-1_353
+  - first:
+      213: 9186527495142545655
+    second: green mage motion1-1_354
+  - first:
+      213: -2692079198568310624
+    second: green mage motion1-1_355
+  - first:
+      213: 2710327324936571999
+    second: green mage motion1-1_356
+  - first:
+      213: 2798131310361266318
+    second: green mage motion1-1_357
+  - first:
+      213: 8626906169801445772
+    second: green mage motion1-1_358
+  - first:
+      213: 4193073872045861740
+    second: green mage motion1-1_359
+  - first:
+      213: -5600260803573580561
+    second: green mage motion1-1_360
+  - first:
+      213: -1362956402074026780
+    second: green mage motion1-1_361
+  - first:
+      213: 3685786518143091222
+    second: green mage motion1-1_362
+  - first:
+      213: -7800944851523401422
+    second: green mage motion1-1_363
+  - first:
+      213: 1691618761721227326
+    second: green mage motion1-1_364
+  - first:
+      213: 190610461989488199
+    second: green mage motion1-1_365
+  - first:
+      213: 4347184026544507358
+    second: green mage motion1-1_366
+  - first:
+      213: 7129718336661963053
+    second: green mage motion1-1_367
+  - first:
+      213: 3391978645015879307
+    second: green mage motion1-1_368
+  - first:
+      213: -7138114695958243134
+    second: green mage motion1-1_369
+  - first:
+      213: -7518112736898025716
+    second: green mage motion1-1_370
+  - first:
+      213: -892901418321279173
+    second: green mage motion1-1_371
+  - first:
+      213: -1356869144836791070
+    second: green mage motion1-1_372
+  - first:
+      213: 1758871976086926787
+    second: green mage motion1-1_373
+  - first:
+      213: -2263097167734206801
+    second: green mage motion1-1_374
+  - first:
+      213: -975246918826479827
+    second: green mage motion1-1_375
+  - first:
+      213: -4759777579011275682
+    second: green mage motion1-1_376
+  - first:
+      213: 1628835254954948405
+    second: green mage motion1-1_377
+  - first:
+      213: -5019175709884471917
+    second: green mage motion1-1_378
+  - first:
+      213: 2599163877446560282
+    second: green mage motion1-1_379
+  - first:
+      213: 8938013397607901023
+    second: green mage motion1-1_380
+  - first:
+      213: -1925940864129470631
+    second: green mage motion1-1_381
+  - first:
+      213: 1305238923798271433
+    second: green mage motion1-1_382
+  - first:
+      213: -5203474170569992429
+    second: green mage motion1-1_383
+  - first:
+      213: 321106257003553767
+    second: green mage motion1-1_384
+  - first:
+      213: 4923557377077411449
+    second: green mage motion1-1_385
+  - first:
+      213: -1979227208272974690
+    second: green mage motion1-1_386
+  - first:
+      213: -3617534905455187490
+    second: green mage motion1-1_387
+  - first:
+      213: -7492651418363240912
+    second: green mage motion1-1_388
+  - first:
+      213: -3133059501799542152
+    second: green mage motion1-1_389
+  - first:
+      213: 5981597879276173036
+    second: green mage motion1-1_390
+  - first:
+      213: -1305396285232572385
+    second: green mage motion1-1_391
+  - first:
+      213: 6975614208117710483
+    second: green mage motion1-1_392
+  - first:
+      213: 4171306198960490995
+    second: green mage motion1-1_393
+  - first:
+      213: 8219341817294992870
+    second: green mage motion1-1_394
+  - first:
+      213: -8918224383659949598
+    second: green mage motion1-1_395
+  - first:
+      213: -5610459873610196891
+    second: green mage motion1-1_396
+  - first:
+      213: -4532287464820449353
+    second: green mage motion1-1_397
+  - first:
+      213: 2970829513565833402
+    second: green mage motion1-1_398
+  - first:
+      213: 4092429679313603762
+    second: green mage motion1-1_399
+  - first:
+      213: 1325638044778523070
+    second: green mage motion1-1_400
+  - first:
+      213: 2625622228563072144
+    second: green mage motion1-1_401
+  - first:
+      213: 6299280536559936991
+    second: green mage motion1-1_402
+  - first:
+      213: -2693626491107839293
+    second: green mage motion1-1_403
+  - first:
+      213: -3658598944259486428
+    second: green mage motion1-1_404
+  - first:
+      213: 3917012371262225765
+    second: green mage motion1-1_405
+  - first:
+      213: -7014773545265080022
+    second: green mage motion1-1_406
+  - first:
+      213: 4911713186671561994
+    second: green mage motion1-1_407
+  - first:
+      213: 4148133934037660617
+    second: green mage motion1-1_408
+  - first:
+      213: 2448605923967514092
+    second: green mage motion1-1_409
+  - first:
+      213: 5818969517502018951
+    second: green mage motion1-1_410
+  - first:
+      213: -4918974515326995118
+    second: green mage motion1-1_411
+  - first:
+      213: -3492459680704530551
+    second: green mage motion1-1_412
+  - first:
+      213: 864802620633155277
+    second: green mage motion1-1_413
+  - first:
+      213: -4117366321319882617
+    second: green mage motion1-1_414
+  - first:
+      213: 8413623764055301295
+    second: green mage motion1-1_415
+  - first:
+      213: -8390252465231176223
+    second: green mage motion1-1_416
+  - first:
+      213: -7924442994577984858
+    second: green mage motion1-1_417
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 1
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: green mage motion1-1_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 460
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa1b55ae3e15e900800000000000000
+      internalID: 713009370419108600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 460
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b88239d38af0ce90800000000000000
+      internalID: -7007325575996864335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 460
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4daa98b64b9930c0800000000000000
+      internalID: -4595471216707719860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 460
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f6e49a08735c510800000000000000
+      internalID: 1568721070944317263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_4
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 460
+        width: 16
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fb1a3babcaaf3a0800000000000000
+      internalID: -6630797583472017602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_5
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 460
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb667ee8dbdceae0800000000000000
+      internalID: -1518597249570542653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_6
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 460
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e55e278b1f1d00a0800000000000000
+      internalID: -6913835649851304472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_7
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 460
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e783fe5b0bf4295d0800000000000000
+      internalID: -3057293576645953410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_8
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 564
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380b8fe550e404680800000000000000
+      internalID: -8772926289142566781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 527
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21395ca2fa0d36d30800000000000000
+      internalID: 4423608709763404562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_10
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 527
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f232acb7e0a5d230800000000000000
+      internalID: 3663010789098402545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 527
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6009c8bbc275e2100800000000000000
+      internalID: 85101292603346950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_12
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 527
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a595f10a9125928e0800000000000000
+      internalID: -1717751512851064486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_13
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 148
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530823d200ec1afe0800000000000000
+      internalID: -1179435127240753099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_14
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 148
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7314a63963e0230800000000000000
+      internalID: 3606880358341097377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_15
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 148
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f472641287911e100800000000000000
+      internalID: 135417467542841167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 148
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a864b8d91d731ffc0800000000000000
+      internalID: -3462925265040357750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_17
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 148
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ceb0f8087435f50800000000000000
+      internalID: 6868912474151447642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_18
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 148
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc42c6e7fe610d80800000000000000
+      internalID: -8286219828377531183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_19
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 148
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd34e569097f8660800000000000000
+      internalID: 7390258594809396693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_20
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 148
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd9030b6ccce03b0800000000000000
+      internalID: -5544268937514934818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_21
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 148
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c172e9758a5dbd0800000000000000
+      internalID: -2605991715094979572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_22
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 148
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f013ccc2316ae10800000000000000
+      internalID: 2208473750397063011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_23
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 148
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da67ef5609e9c0d0800000000000000
+      internalID: -3401931829913621804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_24
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 148
+        width: 27
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffee3f257662c10a0800000000000000
+      internalID: -6909605503077978369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_25
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 148
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca66e28969ca8d3e0800000000000000
+      internalID: -2028681869332158804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green mage motion1-1_26
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 148
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085bf3466cc0fef70800000000000000
+      internalID: 9218601008475649408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
