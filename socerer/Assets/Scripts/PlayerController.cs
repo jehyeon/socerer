@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject bullet;
-    public Transform pos;
-
     private Animator animator;
 
     [SerializeField]
@@ -24,7 +21,6 @@ public class PlayerController : MonoBehaviour
         var y = Input.GetAxisRaw("Vertical");
 
         animator.SetBool("isRun", false);
-        // 
 
         // 좌우 입력
         if (x < 0)
@@ -41,12 +37,6 @@ public class PlayerController : MonoBehaviour
         if (y != 0)
         {
             animator.SetBool("isRun", true);
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            // animator.SetBool("isAttack", true);
-            Instantiate(bullet, pos.position, transform.rotation);
         }
 
         // 이동 방향 설정
