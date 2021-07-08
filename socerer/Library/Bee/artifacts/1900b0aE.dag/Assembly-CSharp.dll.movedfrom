@@ -46,11 +46,6 @@ UnityEditor
 GridBrushEditor
 GridBrushEditorBase
 GridSelection
-PopulateRuleOverideTileWizard
-UnityEditor
-AdvancedRuleOverrideTile
-UnityEngine
-RuleOverrideTile
 Sysroot
 UnityEditor
 LinuxStandalone
