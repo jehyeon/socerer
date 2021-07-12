@@ -23,12 +23,16 @@ public class PlayerAction : MonoBehaviour
         _spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
+    //이동속도에 따라 플레이어 이동
+    //이동방향이 -방향 일 시 Sprite X Flip
     public void Move(Vector3 _vector, float _speed)
     {
         _spriteRenderer.flipX = (_vector.x < 0.0f);
         _transform.Translate(_vector * _speed * Time.deltaTime);
     }
 
+    //SkillManager에 스킬 사용 요청
+    //Player, 마우스 커서 등 스킬이 사용될 위치에 따라 위치정보를 보냄
     public void UseSkill(int _skillID)
     {
         switch(SkillManager.Instance.GetSkillData(_skillID).areaPivot)

@@ -8,7 +8,6 @@ public class Projectile : MonoBehaviour
 
     Transform _transform;
 
-
     private int skillID;
     private int casterInstanceID;
     private float projectileSpeed;
@@ -24,6 +23,7 @@ public class Projectile : MonoBehaviour
         _transform = GetComponent<Transform>();
     }
 
+    //최초로 만들어 졌을 경우에만 자동으로 비활성화 (최초 Pool제작 시)
     private void OnEnable()
     {
         if(isTrial)
@@ -33,6 +33,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    //활성화 요청 시 정보 저장하고 투사체 발사
     public void ActiveProjectile(int _id, int _casterInstanceID, Vector3 _position, Quaternion _rotation)
     {
         gameObject.SetActive(true);
@@ -48,6 +49,9 @@ public class Projectile : MonoBehaviour
         StartCoroutine(MoveProjectile());
     }
 
+    //타겟 충돌여부 판단
+    //>>타겟에 부딪힐 경우 효과 적용 요청
+    //>>이후 관통효과 필요 시 추가 개발 필요
     private void OnTriggerEnter2D(Collider2D _target)
     {
         if(!_target.gameObject.GetInstanceID().Equals(casterInstanceID))
@@ -60,6 +64,9 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    //스킬정보 참조해서 타겟에게 효과적용
+    //타겟에게 처리되는 효과의 경우 CalculationJudgmentEffect에 처리 요청
+    //지면에 처리되는 부가효과 발생 시 해당함수에서 처리
     private void CalculationJudgments(int _id, Collider2D _target)
     {
         switch (SkillManager.Instance.GetSkillData(_id).effectType)
@@ -79,7 +86,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
-
+    //투사체 이동(비활성화 조건 : 이동거리)
     IEnumerator MoveProjectile()
     {
         startLocalPosition = _transform.position;
@@ -100,6 +107,7 @@ public class Projectile : MonoBehaviour
         gameObject.SetActive(false);        
     }
 
+    //비활성화 시 저장된 정보 삭제
     private void OnDisable()
     {
         skillID = 0;

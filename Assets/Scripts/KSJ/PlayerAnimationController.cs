@@ -12,6 +12,8 @@ public class PlayerAnimationController : MonoBehaviour
     {
         _animator = transform.GetComponentInChildren<Animator>();
     }
+
+    //요청받은 상태 별 애니메이션 설정 및 출력
     public void SetAnimation(PlayerCtrl.StatusNormal _statue, bool _value)
     {
         switch(_statue)
@@ -26,8 +28,6 @@ public class PlayerAnimationController : MonoBehaviour
             default:
                 break;
         }
-
-
     }
 
 }

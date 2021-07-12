@@ -16,6 +16,7 @@ public class JudgmentObject : MonoBehaviour
         _transform = GetComponent<Transform>();
     }
 
+    //최초로 만들어 졌을 경우에만 자동으로 비활성화 (최초 Pool제작 시)
     private void OnEnable()
     {
         if (isTrial)
@@ -26,7 +27,7 @@ public class JudgmentObject : MonoBehaviour
     }
 
 
-
+    //활성화 요청 시 정보 저장하고 판정 딜레이만큼 대기
     public void ActiveSkill(int _id, int _casterInstanceID, Vector3 _position, Quaternion _rotation)
     {
         gameObject.SetActive(true);
@@ -40,12 +41,16 @@ public class JudgmentObject : MonoBehaviour
         StartCoroutine(JudgmentDelay());
     }
 
+    //판정 딜레이만큼 대기 후 판정 진행
     IEnumerator JudgmentDelay()
     {
         yield return new WaitForSeconds(SkillManager.Instance.GetSkillData(skillID).judgmentDelay);
         FindJudgmentTarget();
     }
-    
+
+    //스킬정보 참조해서 범위 내 타겟 판정 후 효과처리 요청
+    //>>타겟에게 처리되는 효과의 경우 CalculationJudgmentEffect에 처리 요청
+    //>>CallSkill 등 지면에 처리해야하는 부가효과 발생 시 추가 예정
     private void FindJudgmentTarget()
     {
         switch(SkillManager.Instance.GetSkillData(skillID).areaForm)
@@ -60,6 +65,7 @@ public class JudgmentObject : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    //비활성화 시 저장된 정보 삭제
     private void OnDisable()
     {
         skillID = 0;
