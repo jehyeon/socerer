@@ -1,42 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MLAPI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
+//public class PlayerController : MonoBehaviour
 {
-    private Animator animator;
 
     [SerializeField]
     private float moveSpeed = 1f;
     private Vector3 moveDirection = Vector3.zero;
 
-    private void Awake()
+    private void Start()
     {
-        animator = GetComponent<Animator>();
+        /*
+        cameraTransform = GetComponentInChildren<Camera>().transform;
+        if (IsLocalPlayer)
+        {
+
+        }
+        else
+        {
+        */
+        //    cameraTransform.gameObject.SetActive(false);
+        //}
+           
     }
 
     private void Update()
     {
+       if (IsLocalPlayer)
+       {
+            Move();
+       }
+    }
+
+    void Move()
+    {
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
-
-        animator.SetBool("isRun", false);
 
         // 좌우 입력
         if (x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
-            animator.SetBool("isRun", true);
         }
         else if (x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
-            animator.SetBool("isRun", true);
-        }
-
-        if (y != 0)
-        {
-            animator.SetBool("isRun", true);
         }
 
         // 이동 방향 설정
@@ -45,9 +56,4 @@ public class PlayerController : MonoBehaviour
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
     }
 
-    public void OnAttackEvent()
-    {
-        Debug.Log("End of Attack Animation");
-        animator.SetBool("isAttack", false);
-    }
 }
