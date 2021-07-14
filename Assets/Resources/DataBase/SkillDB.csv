@@ -1,6 +1,10 @@
 ﻿ID,Name_Eng,Name_Kor,Elemental,Type,StiffTime,JudgmentDelay,CoolTime,AreaPivot,AreaForm,Length,Width,JudgmentLayer,EffectType,EffectPower,LinkSkillID
 아이디,이름(English),이름(Korea),속성,분류,경직시간,판정딜레이,쿨타임,중심위치,범위형태,길이,넓이,판정레이어,효과종류,위력,연계스킬
-10100,EnergyBolt,에너지볼트,Fire,Projectile,1.0,1.0,1.0,Player,-,10.0,2.0,Player,Damage,10.0,-
-10200,FireBall,화구,Fire,Projectile,1.0,1.0,1.0,Player,-,5.0,1.0,Player,Damage,10.0,10201
-10201,FireBall,화구,Fire,Projectile,0.0,0.0,0.0,Player,-,0.0,0.0,Player,CallSkill,10210,-
-10210,FireBall,화구폭발,Fire,Area,0.0,1.0,0.0,Ground,Circle,0.5,0.0,Player,Damage,5.0,-
+110100,EnergyBolt,에너지볼트,Fire,Projectile,1.0,1.0,1.0,Player,StraightProj,10.0,2.0,Player,Damage,10.0,-
+110200,FireBall,화구,Fire,Projectile,1.0,1.0,1.0,Player,StraightProj,5.0,1.0,Player,Damage,10.0,110201
+110201,FireBall,화구,Fire,Projectile,0.0,0.0,0.0,Player,-,-,-,Player,CallSkill,110210.0,-
+110210,FireBall,화구폭발,Fire,Area,0.0,1.0,0.0,Ground,Circle,0.5,0.0,Player,Damage,20.0,-
+210100,Flash,점멸,Fire,Area,0.0,0.0,1.0,Ground,-,-,-,-,Teleport,-,-
+210200,FlashAttack,급습,Fire,Area,0.0,0.0,1.0,Ground,-,-,-,-,Teleport,-,210201
+210201,FlashAttack,급습,Fire,Area,0.0,0.0,1.0,Player,-,-,-,-,CallSkill,210210.0,-
+210210,FlashAttack,급습,Fire,Area,0.0,0.0,1.0,Player,Circle,0.5,0.0,Player,Damage,20.0,-

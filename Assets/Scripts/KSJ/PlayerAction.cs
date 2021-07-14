@@ -21,6 +21,7 @@ public class PlayerAction : MonoBehaviour
     private void Start()
     {
         _spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+
     }
 
     //이동속도에 따라 플레이어 이동
@@ -48,6 +49,11 @@ public class PlayerAction : MonoBehaviour
             default:
                 break;      
         }
+    }
+
+    public void Teleport(Vector3 _position)
+    {
+        _transform.position = _position - new Vector3(0.0f, 0.12f, 0.0f);
     }
 
 }
