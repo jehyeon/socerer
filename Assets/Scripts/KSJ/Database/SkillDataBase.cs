@@ -51,21 +51,31 @@ public struct SkillData
         _judgmentDelay = (float)_skillData["JudgmentDelay"];
         _coolTime = (float)_skillData["CoolTime"];
         _areaPivot = (SkillAreaPivot)System.Enum.Parse(typeof(SkillAreaPivot), _skillData["AreaPivot"].ToString());
+
         if(!_skillData["AreaForm"].ToString().Equals("-"))
         {
             _areaForm = (SkillAreaForm)System.Enum.Parse(typeof(SkillAreaForm), _skillData["AreaForm"].ToString());
         }
-        _length = (float)_skillData["Length"];
-        _width = (float)_skillData["Width"];
-        _judgmentLayer = (LayerEnum)System.Enum.Parse(typeof(LayerEnum), _skillData["JudgmentLayer"].ToString());
-        _effectType = (SkillEffectType)System.Enum.Parse(typeof(SkillEffectType), _skillData["EffectType"].ToString());
-        if(_effectType.Equals(SkillEffectType.CallSkill))
+        if (!_skillData["Length"].ToString().Equals("-"))
         {
-            _effectPower = (int)_skillData["EffectPower"];
+            _length = (float)_skillData["Length"];
         }
-        else
+        if (!_skillData["Width"].ToString().Equals("-"))
+        {
+            _width = (float)_skillData["Width"];
+        }
+        if (!_skillData["JudgmentLayer"].ToString().Equals("-"))
+        {
+            _judgmentLayer = (LayerEnum)System.Enum.Parse(typeof(LayerEnum), _skillData["JudgmentLayer"].ToString());
+
+        }
+
+        _effectType = (SkillEffectType)System.Enum.Parse(typeof(SkillEffectType), _skillData["EffectType"].ToString());
+
+        if (!_skillData["EffectPower"].ToString().Equals("-"))
         {
             _effectPower = (float)_skillData["EffectPower"];
+
         }
 
         if(!_skillData["LinkSkillID"].ToString().Equals("-"))
