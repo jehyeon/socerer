@@ -79,7 +79,7 @@ public struct SkillData
 
 public class SkillDataBase : MonoBehaviour
 {
-    public Dictionary<int, SkillData> skillDB = new Dictionary<int, SkillData>();
+    private Dictionary<int, SkillData> skillDB = new Dictionary<int, SkillData>();
 
     private void Awake()
     {

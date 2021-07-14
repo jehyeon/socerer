@@ -18,6 +18,8 @@ public class CalculationJudgmentEffect : MonoBehaviour
         }
     }
 
+    //요청받은 타겟(단일)에 효과처리 
+    //타겟 전용 효과적용(스턴, 슬로우 등등)
     public void CalculationJudgment(int _id, int _casterInstanceID, Collider2D _target)
     {
         switch (SkillManager.Instance.GetSkillData(_id).effectType)
@@ -29,7 +31,9 @@ public class CalculationJudgmentEffect : MonoBehaviour
                 break;
         }
     }
-
+    
+    //요청받은 타겟(다수)에 효과처리 
+    //타겟 전용 효과적용(스턴, 슬로우 등등)
     public void CalculationJudgment(int _id, int _casterInstanceID, Collider2D[] _targetArray)
     {
         for (int i = 0; i < _targetArray.Length; i++)
