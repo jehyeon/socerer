@@ -25,7 +25,7 @@ public class CalculationJudgmentEffect : MonoBehaviour
         switch (SkillManager.Instance.GetSkillData(_id).effectType)
         {
             case SkillEffectType.Damage:
-                Debug.Log(_target + "이(가) " + SkillManager.Instance.GetSkillData(_id).nameKor + " 로 인하여 " + SkillManager.Instance.GetSkillData(_id).effectPower + "만큼의 대미지를 입음");
+                PlayerManager.Instance.PlayerHPIncrease(_target.gameObject.GetInstanceID(), -(SkillManager.Instance.GetSkillData(_id).effectPower));
                 break;
             default:
                 break;
@@ -34,14 +34,14 @@ public class CalculationJudgmentEffect : MonoBehaviour
     
     //요청받은 타겟(다수)에 효과처리 
     //타겟 전용 효과적용(스턴, 슬로우 등등)
-    public void CalculationJudgment(int _id, int _casterInstanceID, Collider2D[] _targetArray)
+    public void CalculationJudgment(int _id, int _casterInstanceID, List<Collider2D> _targetList)
     {
-        for (int i = 0; i < _targetArray.Length; i++)
+        for (int i = 0; i < _targetList.Count; i++)
         {
             switch (SkillManager.Instance.GetSkillData(_id).effectType)
             {
                 case SkillEffectType.Damage:
-                    Debug.Log(_targetArray[i] + "이(가) " + SkillManager.Instance.GetSkillData(_id).nameKor + " 로 인하여 " + SkillManager.Instance.GetSkillData(_id).effectPower + "만큼의 대미지를 입음");
+                    PlayerManager.Instance.PlayerHPIncrease(_targetList[i].gameObject.GetInstanceID(), -(SkillManager.Instance.GetSkillData(_id).effectPower));
                     break;
                 default:
                     break;

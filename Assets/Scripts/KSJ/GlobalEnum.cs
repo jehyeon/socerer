@@ -20,7 +20,7 @@ public enum SkillAreaPivot
 
 public enum SkillAreaForm
 {
-    Circle, Box, Fan
+    Circle, Box, Fan, StraightProj
 }
 
 public enum LayerEnum
@@ -36,5 +36,5 @@ public enum LayerMarskEnum
 
 public enum SkillEffectType
 {
-    Damage, Stun, Slow, CallSkill
+    Damage, Stun, Slow, CallSkill, Teleport
 }

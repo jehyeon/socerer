@@ -56,6 +56,7 @@ public class Projectile : MonoBehaviour
     {
         if(!_target.gameObject.GetInstanceID().Equals(casterInstanceID))
         {
+            Debug.Log(skillID + "dqdqd" + (int)SkillManager.Instance.GetSkillData(skillID).judgmentLayer);
             if (_target.gameObject.layer.Equals((int)SkillManager.Instance.GetSkillData(skillID).judgmentLayer))
             {
                 CalculationJudgments(skillID, _target);
@@ -69,6 +70,7 @@ public class Projectile : MonoBehaviour
     //지면에 처리되는 부가효과 발생 시 해당함수에서 처리
     private void CalculationJudgments(int _id, Collider2D _target)
     {
+        Debug.Log("워늉을 찾아라 1 " + SkillManager.Instance.GetSkillData(_id).effectType);
         switch (SkillManager.Instance.GetSkillData(_id).effectType)
         {
             case SkillEffectType.CallSkill:
@@ -79,7 +81,6 @@ public class Projectile : MonoBehaviour
                 break;
         }
 
-        Debug.Log(SkillManager.Instance.GetSkillData(_id).linkSkillID);
         if (!SkillManager.Instance.GetSkillData(_id).linkSkillID.Equals(0))
         {
             CalculationJudgments(SkillManager.Instance.GetSkillData(_id).linkSkillID, _target);

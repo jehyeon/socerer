@@ -7,37 +7,55 @@ public class PlayerCtrl : MonoBehaviour
     public enum StatusNormal { IDLE, MOVE, USESKILL }
     StatusNormal _statusNormal;
 
-    bool isNormalFSM;
-    [Header("Player Status")]
-    [SerializeField] float moveSpeed = 5.0f;
+    [Header("더미모드")]
+    [SerializeField] bool dummyMode;
 
     [Header("Required Component")]
     [SerializeField] PlayerAnimationController _playerAnimationController;
     [SerializeField] PlayerAction _playerAction;
     [SerializeField] PlayerAim _playerAim;
+    [SerializeField] PlayerStatus _playerStatus;
+
+
+    //내부변수
+    bool isNormalFSM;
 
     private void Start()
     {
         _playerAnimationController = GetComponent<PlayerAnimationController>();
         _playerAction = GetComponent<PlayerAction>();
         _playerAim = transform.GetComponentInChildren<PlayerAim>();
+        _playerStatus = GetComponent<PlayerStatus>();
 
         _statusNormal = StatusNormal.IDLE;
         isNormalFSM = true;
         StartCoroutine(NormalFSM());
+
+        if(dummyMode)
+        {
+            _playerAim.gameObject.SetActive(false);
+        }
     }
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(!dummyMode)
         {
-            _playerAction.UseSkill(10100);
+            if (Input.GetMouseButtonDown(0))
+            {
+                _playerAction.UseSkill(110100);
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                _playerAction.UseSkill(110200);
+            }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _playerAction.UseSkill(210200);
+                //임시로 센터포지션 잡아보자
+                //_playerAction.Teleport(_playerAim.mousePosition - new Vector3(0.0f, 0.12f));
+            }
         }
-        if (Input.GetMouseButtonDown(1))
-        {
-            _playerAction.UseSkill(10200);
-        }
-
     }
 
     //Player FSM 구현
@@ -52,7 +70,15 @@ public class PlayerCtrl : MonoBehaviour
                 case StatusNormal.IDLE:
                     if (!InputManager.Instance.inputVector.Equals(Vector2.zero))
                     {
-                        SetNormalFSM(StatusNormal.MOVE);
+                        if(!dummyMode)
+                        {
+                            SetNormalFSM(StatusNormal.MOVE);
+                        }
+                        else
+                        {
+
+                            yield return null;
+                        }
                     }
                     else
                     {
@@ -69,7 +95,7 @@ public class PlayerCtrl : MonoBehaviour
                     }
                     else
                     {
-                        _playerAction.Move(InputManager.Instance.inputVector, moveSpeed);
+                        _playerAction.Move(InputManager.Instance.inputVector, _playerStatus.moveSpeed);
                         yield return null;
                     }
                     break;                
@@ -127,5 +153,10 @@ public class PlayerCtrl : MonoBehaviour
                 break;
         }
         _playerAnimationController.SetAnimation(_statusNormal, false);
+    }
+
+    public void Teleport(Vector3 _position)
+    {
+        _playerAction.Teleport(_position);
     }
 }
