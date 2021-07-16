@@ -90,7 +90,7 @@ public class JudgmentObject : MonoBehaviour
                 PlayerManager.Instance.PlayerTeleport(casterInstanceID, _transform.position);
                 break;
             default:
-                CalculationJudgmentEffect.Instance.CalculationJudgment(_id, casterInstanceID, _targetList);
+                CalculationJudgmentEffect.Instance.CalculationJudgment(_id, casterInstanceID, _targetList, _transform.position);                
                 break;
         }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    [Header("Move Input")]
     [SerializeField] private KeyCode _left = KeyCode.A;
     [SerializeField] private KeyCode _right = KeyCode.D;
     [SerializeField] private KeyCode _up = KeyCode.W;
@@ -13,6 +14,17 @@ public class InputManager : MonoBehaviour
     public KeyCode right { get => _right; }
     public KeyCode up { get => _up; }
     public KeyCode down { get => _down; }
+
+    [Header("Skill Input")]
+    [SerializeField] private KeyCode _attackSkill1 = KeyCode.Q;
+    [SerializeField] private KeyCode _attackSkill2 = KeyCode.E;
+    [SerializeField] private KeyCode _moveSkill = KeyCode.Space;
+    [SerializeField] private KeyCode _specialSkill = KeyCode.R;
+    
+    public KeyCode attackSkill1 { get => _attackSkill1; }
+    public KeyCode attackSkill2 { get => _attackSkill2; }
+    public KeyCode moveSkill { get => _moveSkill; }
+    public KeyCode specialSkill { get => _specialSkill; }
 
 
 

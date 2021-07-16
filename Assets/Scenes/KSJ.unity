@@ -541,6 +541,10 @@ MonoBehaviour:
   _right: 100
   _up: 119
   _down: 115
+  _attackSkill1: 113
+  _attackSkill2: 101
+  _moveSkill: 32
+  _specialSkill: 114
 --- !u!4 &233528969
 Transform:
   m_ObjectHideFlags: 0
@@ -623,7 +627,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.7
+  orthographic size: 0.95
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1357,6 +1361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95dd0b9a8e9c644c8df839426825510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerCtrl: {fileID: 0}
   _spriteRenderer: {fileID: 0}
   _playerAim: {fileID: 0}
 --- !u!114 &632766820
@@ -1371,6 +1376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dd6b11a5fa37942b3cdbc85f6e3752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockBackCorrection: 0.5
+  maxKnockBackCount: 2
   dummyMode: 1
   _playerAnimationController: {fileID: 0}
   _playerAction: {fileID: 0}
@@ -2218,6 +2225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95dd0b9a8e9c644c8df839426825510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerCtrl: {fileID: 0}
   _spriteRenderer: {fileID: 0}
   _playerAim: {fileID: 0}
 --- !u!114 &1058329001
@@ -2232,6 +2240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dd6b11a5fa37942b3cdbc85f6e3752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockBackCorrection: 0.5
+  maxKnockBackCount: 2
   dummyMode: 1
   _playerAnimationController: {fileID: 0}
   _playerAction: {fileID: 0}
@@ -2631,6 +2641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95dd0b9a8e9c644c8df839426825510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerCtrl: {fileID: 0}
   _spriteRenderer: {fileID: 0}
   _playerAim: {fileID: 0}
 --- !u!114 &1275188453
@@ -2645,6 +2656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dd6b11a5fa37942b3cdbc85f6e3752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockBackCorrection: 0
+  maxKnockBackCount: 0
   dummyMode: 0
   _playerAnimationController: {fileID: 0}
   _playerAction: {fileID: 0}
@@ -3421,6 +3434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95dd0b9a8e9c644c8df839426825510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerCtrl: {fileID: 0}
   _spriteRenderer: {fileID: 0}
   _playerAim: {fileID: 0}
 --- !u!114 &1681850166
@@ -3435,6 +3449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dd6b11a5fa37942b3cdbc85f6e3752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockBackCorrection: 0.5
+  maxKnockBackCount: 2
   dummyMode: 1
   _playerAnimationController: {fileID: 0}
   _playerAction: {fileID: 0}
@@ -3899,6 +3915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95dd0b9a8e9c644c8df839426825510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerCtrl: {fileID: 0}
   _spriteRenderer: {fileID: 0}
   _playerAim: {fileID: 0}
 --- !u!114 &1795652896
@@ -3913,6 +3930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96dd6b11a5fa37942b3cdbc85f6e3752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockBackCorrection: 0.5
+  maxKnockBackCount: 2
   dummyMode: 1
   _playerAnimationController: {fileID: 0}
   _playerAction: {fileID: 0}

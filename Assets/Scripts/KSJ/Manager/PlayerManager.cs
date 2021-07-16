@@ -24,7 +24,6 @@ public struct PlayerInpormation
         _playerTransform = _playerGameObject.transform;
         _playerCtrl = _playerGameObject.GetComponent<PlayerCtrl>();
         _playerStatus = _playerGameObject.GetComponent<PlayerStatus>();
-
     }
 
     public void Clear()
@@ -69,7 +68,6 @@ public class PlayerManager : MonoBehaviour
 
             playerdic.Add(temp.playerInstanceID, temp);
 
-            Debug.Log("instance " + playerdic[temp.playerInstanceID].playerInstanceID);
         }
     }
 
@@ -88,4 +86,8 @@ public class PlayerManager : MonoBehaviour
         playerdic[_playerInstanceID].playerStatus.HPIncrease(_amount);
     }
 
+    public void PlayerKnockback(int _playerInstanceID, Vector3 _pointOfForce, float _distance)
+    {
+        playerdic[_playerInstanceID].PlayerCtrl.KnockBack(_pointOfForce, _distance);
+    }
 }
