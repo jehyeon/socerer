@@ -15,6 +15,7 @@ public class PlayerStatus : MonoBehaviour
     [Header("Required Component")]
     [SerializeField] PlayerCtrl _playerCtrl;
 
+
     [Header("Required Child Component")]
     [SerializeField] PlayerUICtrl _playerUICtrl;
 

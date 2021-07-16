@@ -12,6 +12,7 @@ public struct SkillData
     private float _stiffTime;
     private float _judgmentDelay;
     private float _coolTime;
+    private float _knockBackDistance;
     private SkillAreaPivot _areaPivot;
     private SkillAreaForm _areaForm;
     private float _length;
@@ -30,6 +31,7 @@ public struct SkillData
     public float stiffTime { get => _stiffTime; }
     public float judgmentDelay { get => _judgmentDelay; }
     public float coolTime { get => _coolTime; }
+    public float knockBackDistance { get => _knockBackDistance; }
     public SkillAreaPivot areaPivot { get => _areaPivot; }
     public SkillAreaForm areaForm { get => _areaForm; }
     public float length { get => _length; }
@@ -50,6 +52,10 @@ public struct SkillData
         _stiffTime = (float)_skillData["StiffTime"];
         _judgmentDelay = (float)_skillData["JudgmentDelay"];
         _coolTime = (float)_skillData["CoolTime"];
+        if (!_skillData["KnockBackDistance"].ToString().Equals("-"))
+        {
+            _knockBackDistance = (float)_skillData["KnockBackDistance"];
+        }
         _areaPivot = (SkillAreaPivot)System.Enum.Parse(typeof(SkillAreaPivot), _skillData["AreaPivot"].ToString());
 
         if(!_skillData["AreaForm"].ToString().Equals("-"))

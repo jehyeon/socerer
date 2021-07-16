@@ -45,7 +45,6 @@ public class PlayerUICtrl : MonoBehaviour
             var findObjectPool = gameObject.GetComponentsInChildren<Transform>();
             for (int i = 0; i < findObjectPool.Length; i++)
             {
-                Debug.Log(findObjectPool[i].name);
                 if (findObjectPool[i].name.Equals("HpBar"))
                 {
                     _hpbar = findObjectPool[i].GetComponent<Image>();

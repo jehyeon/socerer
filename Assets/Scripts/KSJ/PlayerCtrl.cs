@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    public enum StatusNormal { IDLE, MOVE, USESKILL }
+    public enum StatusNormal { NULL, IDLE, MOVE, USESKILL, KNOCKBACK }
     StatusNormal _statusNormal;
+
+    [Range(0.0f, 1.0f)]
+    [SerializeField] float KnockBackCorrection;
+    [SerializeField] int maxKnockBackCount;
+
 
     [Header("더미모드")]
     [SerializeField] bool dummyMode;
@@ -19,6 +24,17 @@ public class PlayerCtrl : MonoBehaviour
 
     //내부변수
     bool isNormalFSM;
+    Coroutine normalFSM;
+
+    Vector3 goalPointOfKnockBack;
+    int knockBackCount;
+    bool renewalKnockBackGoalPoint;
+
+    //임시변수
+    Vector3 tempGoalPoint;
+    float tempTimeChk;
+
+    
 
     private void Start()
     {
@@ -31,7 +47,9 @@ public class PlayerCtrl : MonoBehaviour
         isNormalFSM = true;
         StartCoroutine(NormalFSM());
 
-        if(dummyMode)
+        goalPointOfKnockBack = Vector3.zero;
+
+        if (dummyMode)
         {
             _playerAim.gameObject.SetActive(false);
         }
@@ -51,12 +69,21 @@ public class PlayerCtrl : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                _playerAction.UseSkill(210100);
+                //임시로 센터포지션 잡아보자
+                //_playerAction.Teleport(_playerAim.mousePosition - new Vector3(0.0f, 0.12f));
+            }
+            if (Input.GetKeyDown(KeyCode.V))
+            {
                 _playerAction.UseSkill(210200);
                 //임시로 센터포지션 잡아보자
                 //_playerAction.Teleport(_playerAim.mousePosition - new Vector3(0.0f, 0.12f));
             }
         }
     }
+
+
+
 
     //Player FSM 구현
     IEnumerator NormalFSM()
@@ -101,6 +128,14 @@ public class PlayerCtrl : MonoBehaviour
                     break;                
                 case StatusNormal.USESKILL:
                     break;
+                case StatusNormal.KNOCKBACK:
+                    if(renewalKnockBackGoalPoint)
+                    {
+                        _playerAction.KnockBack(goalPointOfKnockBack);
+                        renewalKnockBackGoalPoint = false;
+                    }
+                    yield return null;
+                    break;
                 default:
                     break;
             }
@@ -126,6 +161,8 @@ public class PlayerCtrl : MonoBehaviour
                         break;
                     case StatusNormal.USESKILL:
                         break;
+                    case StatusNormal.KNOCKBACK:
+                        break;
                     default:
                         break;
                 }
@@ -149,14 +186,51 @@ public class PlayerCtrl : MonoBehaviour
                 break;
             case StatusNormal.USESKILL:
                 break;
+            case StatusNormal.KNOCKBACK:
+                goalPointOfKnockBack = Vector3.zero;
+                knockBackCount = 0;
+                break;
             default:
                 break;
         }
         _playerAnimationController.SetAnimation(_statusNormal, false);
     }
-
+    
     public void Teleport(Vector3 _position)
     {
-        _playerAction.Teleport(_position);
+        _playerAction.Teleport(_position - _playerAim.transform.localPosition);
+        SetNormalFSM(StatusNormal.IDLE);
+    }
+
+    public void KnockBack(Vector3 _pointOfForce, float _distance)
+    {
+        if ((KnockBackCorrection * knockBackCount) < 1.0f)
+        {
+            if(!_statusNormal.Equals(StatusNormal.KNOCKBACK))
+            {
+                goalPointOfKnockBack = transform.position;
+            }
+
+            tempGoalPoint = (_playerAim.transform.position - _pointOfForce).normalized * _distance * (1.0f - (KnockBackCorrection * knockBackCount)) ;
+            goalPointOfKnockBack += tempGoalPoint;
+            renewalKnockBackGoalPoint = true;
+
+            if (knockBackCount < maxKnockBackCount)
+            {
+                knockBackCount++;
+            }
+            SetNormalFSM(StatusNormal.KNOCKBACK);
+        }
+    }
+
+    public void StopKnockBack()
+    {
+        _playerAction.StopKnockBack();
+        SetNormalFSM(StatusNormal.IDLE);
+    }
+
+    public void EndKnockBack()
+    {
+        SetNormalFSM(StatusNormal.IDLE);
     }
 }
