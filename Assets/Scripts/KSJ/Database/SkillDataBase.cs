@@ -18,8 +18,11 @@ public struct SkillData
     private float _length;
     private float _width;
     private LayerEnum _judgmentLayer;
+    private float _chanceOfEffect;
     private SkillEffectType _effectType;
     private float _effectPower;
+    private float _effectDuration;
+    private float _effectTerm;
     private int _linkSkillID;
     private GameObject _prefab;
 
@@ -37,8 +40,11 @@ public struct SkillData
     public float length { get => _length; }
     public float width { get => _width; }
     public LayerEnum judgmentLayer { get => _judgmentLayer; }
+    public float chanceOfEffect { get => _chanceOfEffect; }
     public SkillEffectType effectType { get => _effectType; }
     public float effectPower { get => _effectPower; }
+    public float effectDuration { get => _effectDuration; }
+    public float effectTerm { get => _effectTerm; }
     public int linkSkillID { get => _linkSkillID; }
     public GameObject prefab { get => _prefab; }
 
@@ -52,6 +58,7 @@ public struct SkillData
         _stiffTime = (float)_skillData["StiffTime"];
         _judgmentDelay = (float)_skillData["JudgmentDelay"];
         _coolTime = (float)_skillData["CoolTime"];
+
         if (!_skillData["KnockBackDistance"].ToString().Equals("-"))
         {
             _knockBackDistance = (float)_skillData["KnockBackDistance"];
@@ -73,18 +80,26 @@ public struct SkillData
         if (!_skillData["JudgmentLayer"].ToString().Equals("-"))
         {
             _judgmentLayer = (LayerEnum)System.Enum.Parse(typeof(LayerEnum), _skillData["JudgmentLayer"].ToString());
-
+        }
+        else
+        {
+            _judgmentLayer = LayerEnum.Null;
         }
 
+        _chanceOfEffect = (float)_skillData["ChanceOfEffect"];
         _effectType = (SkillEffectType)System.Enum.Parse(typeof(SkillEffectType), _skillData["EffectType"].ToString());
 
         if (!_skillData["EffectPower"].ToString().Equals("-"))
         {
             _effectPower = (float)_skillData["EffectPower"];
-
         }
 
-        if(!_skillData["LinkSkillID"].ToString().Equals("-"))
+        if (!_skillData["EffectDuration"].ToString().Equals("-"))
+        {
+            _effectDuration = (float)_skillData["EffectDuration"];
+        }
+
+        if (!_skillData["LinkSkillID"].ToString().Equals("-"))
         {
             _linkSkillID = (int)_skillData["LinkSkillID"];
         }

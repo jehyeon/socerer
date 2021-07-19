@@ -9,7 +9,7 @@ public class PlayerCtrl : MonoBehaviour
 
     [Range(0.0f, 1.0f)]
     [SerializeField] float KnockBackCorrection;
-    [SerializeField] int maxKnockBackCount;
+    [SerializeField] int maxKnockBackStack;
 
 
     [Header("더미모드")]
@@ -27,7 +27,7 @@ public class PlayerCtrl : MonoBehaviour
     Coroutine normalFSM;
 
     Vector3 goalPointOfKnockBack;
-    int knockBackCount;
+    int knockBackStack;
     bool renewalKnockBackGoalPoint;
 
     //임시변수
@@ -65,7 +65,7 @@ public class PlayerCtrl : MonoBehaviour
             }
             if (Input.GetMouseButtonDown(1))
             {
-                _playerAction.UseSkill(110200);
+                _playerAction.UseSkill(120100);
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -75,7 +75,7 @@ public class PlayerCtrl : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.V))
             {
-                _playerAction.UseSkill(210200);
+                _playerAction.UseSkill(110200);
                 //임시로 센터포지션 잡아보자
                 //_playerAction.Teleport(_playerAim.mousePosition - new Vector3(0.0f, 0.12f));
             }
@@ -188,7 +188,7 @@ public class PlayerCtrl : MonoBehaviour
                 break;
             case StatusNormal.KNOCKBACK:
                 goalPointOfKnockBack = Vector3.zero;
-                knockBackCount = 0;
+                knockBackStack = 0;
                 break;
             default:
                 break;
@@ -196,33 +196,41 @@ public class PlayerCtrl : MonoBehaviour
         _playerAnimationController.SetAnimation(_statusNormal, false);
     }
     
+    //playerManager에서 사용
+    //전달받은 좌표로 자신을 이동하도록 playerAction에 요청
+    //순간이동 직후는 IDLE상태로
     public void Teleport(Vector3 _position)
     {
         _playerAction.Teleport(_position - _playerAim.transform.localPosition);
+        StopKnockBack();
         SetNormalFSM(StatusNormal.IDLE);
     }
 
+    //playerManager에서 사용
+    //전달받은 작용점과 거리 / 넉백 중이라면 현재 Player가 넉백중인 방향 및 거리까지 포함하여 최종 넉백목표지점 산출 후 갱신
+    //연속적인 넉백 발생 시 보정 및 최대보정횟수 적용
     public void KnockBack(Vector3 _pointOfForce, float _distance)
     {
-        if ((KnockBackCorrection * knockBackCount) < 1.0f)
+        if ((KnockBackCorrection * knockBackStack) < 1.0f)
         {
             if(!_statusNormal.Equals(StatusNormal.KNOCKBACK))
             {
                 goalPointOfKnockBack = transform.position;
             }
 
-            tempGoalPoint = (_playerAim.transform.position - _pointOfForce).normalized * _distance * (1.0f - (KnockBackCorrection * knockBackCount)) ;
+            tempGoalPoint = (_playerAim.transform.position - _pointOfForce).normalized * _distance * (1.0f - (KnockBackCorrection * knockBackStack)) ;
             goalPointOfKnockBack += tempGoalPoint;
             renewalKnockBackGoalPoint = true;
 
-            if (knockBackCount < maxKnockBackCount)
+            if (knockBackStack < maxKnockBackStack)
             {
-                knockBackCount++;
+                knockBackStack++;
             }
             SetNormalFSM(StatusNormal.KNOCKBACK);
         }
     }
 
+    //넉백 중지 요청
     public void StopKnockBack()
     {
         _playerAction.StopKnockBack();

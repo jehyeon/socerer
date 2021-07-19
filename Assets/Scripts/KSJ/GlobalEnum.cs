@@ -25,6 +25,7 @@ public enum SkillAreaForm
 
 public enum LayerEnum
 {
+    Null = 0,
     Player = 7
 }
 
@@ -36,5 +37,5 @@ public enum LayerMarskEnum
 
 public enum SkillEffectType
 {
-    Damage, Stun, Slow, CallSkill, Teleport
+    Damage, Stun, Slow, CallSkill, Teleport, DamageOverTime
 }
