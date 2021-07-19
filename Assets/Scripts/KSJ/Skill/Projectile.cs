@@ -54,14 +54,18 @@ public class Projectile : MonoBehaviour
     //>>이후 관통효과 필요 시 추가 개발 필요
     private void OnTriggerEnter2D(Collider2D _target)
     {
-        if(!_target.gameObject.GetInstanceID().Equals(casterInstanceID))
+        if(gameObject.activeSelf) //Player가 다수 겹쳐있을 경우, Projectile이 비활성화 되어도 반복해서 접근되는 경우가 있음
         {
-            if (_target.gameObject.layer.Equals((int)SkillManager.Instance.GetSkillData(skillID).judgmentLayer))
+            if (!_target.gameObject.GetInstanceID().Equals(casterInstanceID))
             {
-                CalculationJudgments(skillID, _target);
-                gameObject.SetActive(false);
+                if (_target.gameObject.layer.Equals((int)SkillManager.Instance.GetSkillData(skillID).judgmentLayer))
+                {
+                    CalculationJudgments(skillID, _target);
+                    gameObject.SetActive(false);
+                }
             }
         }
+
     }
 
     //스킬정보 참조해서 타겟에게 효과적용

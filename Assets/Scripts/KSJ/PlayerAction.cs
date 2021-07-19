@@ -17,7 +17,7 @@ public class PlayerAction : MonoBehaviour
 
 
     //내부변수
-    Coroutine knockBackCoroutin;
+    Coroutine knockBackCoroutine;
     Vector3 knockBackVector;
     float knockBackDistance;
     float knockBackSpeed;
@@ -69,32 +69,39 @@ public class PlayerAction : MonoBehaviour
         }
     }
 
+    //지정된 위치로 자기 자신을 이동
     public void Teleport(Vector3 _position)
     {
         _transform.position = _position;
     }
 
 
+    //StopKnockBack함수를 통해 작동중인 넉백코루틴을 정지시키고 knockBackCoroutine를 null로 만듦
+    //현재 위치와 전달된 목표지점을 기반으로 방향과 초기속도를 계산
+    //넉백코루틴을 재실행시키고 knockBackCoroutine로 지정
     public void KnockBack(Vector3 _knockBackGoalPosition)
     {
-        if(knockBackCoroutin != null)
-        {
-            StopCoroutine(knockBackCoroutin);
-        }
+        StopKnockBack();
         knockBackVector = (_knockBackGoalPosition - _transform.position).normalized;
         knockBackDistance = Vector3.Distance(_knockBackGoalPosition, _transform.position);
         knockBackTime = Mathf.Sqrt((1.0f / decreaseKnockBackSpeed) * knockBackDistance * 2.0f);
         knockBackSpeed = decreaseKnockBackSpeed * knockBackTime;
         
-        knockBackCoroutin = StartCoroutine(KnockBackFSM(_knockBackGoalPosition));
+        knockBackCoroutine = StartCoroutine(KnockBackCoroutine(_knockBackGoalPosition));
     }
 
+    //넉백코루틴이 작동 중이라면 정지시키고 knockBackCoroutine를 null로 만듦
     public void StopKnockBack()
     {
-        StopCoroutine(knockBackCoroutin);
+        if (knockBackCoroutine != null)
+        {
+            StopCoroutine(knockBackCoroutine);
+            knockBackCoroutine = null;
+        }
     }
 
-    IEnumerator KnockBackFSM(Vector3 _knockBackGoalPosition)
+    //넉백코루틴
+    IEnumerator KnockBackCoroutine(Vector3 _knockBackGoalPosition)
     {
         knockBackSpeed -= decreaseKnockBackSpeed * (Time.deltaTime * 0.5f);
         tempTime = Time.deltaTime * 0.5f;
