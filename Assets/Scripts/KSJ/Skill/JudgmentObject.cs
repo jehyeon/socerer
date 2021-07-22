@@ -7,29 +7,39 @@ public class JudgmentObject : MonoBehaviour
     bool isTrial = true;
 
     Transform _transform;
+    AreaDisplay _areaDisplay;
 
     [SerializeField] private int skillID;
     [SerializeField] private int casterInstanceID;
 
     private List<Collider2D> judgmentTargets = new List<Collider2D>();
+    private Coroutine _judgmentDelay;
 
     private void Awake()
     {
         _transform = GetComponent<Transform>();
+        _areaDisplay = GetComponent<AreaDisplay>();
     }
 
     //최초로 만들어 졌을 경우에만 자동으로 비활성화 (최초 Pool제작 시)
     //그 외에는 기존 계산해 두었던 타겟리스트 초기화
     private void OnEnable()
     {
-        if (isTrial)
-        {
-            isTrial = false;
-            gameObject.SetActive(false);
-        }
-        else
+        if (!isTrial)
         {
             judgmentTargets.Clear();
+        }
+    }
+
+    private void Start()
+    {
+        if(isTrial)
+        {
+            isTrial = false;
+            if (gameObject.activeSelf)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 
@@ -45,7 +55,15 @@ public class JudgmentObject : MonoBehaviour
 
         casterInstanceID = _casterInstanceID;
 
-        StartCoroutine(JudgmentDelay());
+        if(SkillManager.Instance.GetSkillData(skillID).judgmentDelay.Equals(0.0f))
+        {
+            FindJudgmentTarget();
+        }
+        else
+        {
+            _areaDisplay.ActiveAreaDisplay(skillID);
+            _judgmentDelay = StartCoroutine(JudgmentDelay());
+        }
     }
 
     //판정 딜레이만큼 대기 후 판정 진행
@@ -110,5 +128,11 @@ public class JudgmentObject : MonoBehaviour
     {
         skillID = 0;
         casterInstanceID = 0;
+
+        if(_judgmentDelay != null)
+        {
+            StopCoroutine(_judgmentDelay);
+            _judgmentDelay = null;
+        }
     }
 }

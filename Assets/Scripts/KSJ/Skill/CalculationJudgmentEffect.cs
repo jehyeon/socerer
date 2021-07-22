@@ -23,6 +23,19 @@ public class CalculationJudgmentEffect : MonoBehaviour
     //이후 효과가 대부분 구현되고, switch구문이 필요없다고 판단 될 경우 구문 삭제 예정
     public void CalculationJudgment(int _id, int _casterInstanceID, Collider2D _target, Vector3 _forcePoint)
     {
+        //확률과 별개로 DamageAmount만큼 데미지 적용
+        if (!SkillManager.Instance.GetSkillData(_id).damageAmount.Equals(0.0f))
+        {
+            PlayerManager.Instance.PlayerDamage(_id, _casterInstanceID, _target.gameObject.GetInstanceID());
+        }
+
+        //확률과 별개로 넉백은 적용
+        if (!SkillManager.Instance.GetSkillData(_id).knockBackDistance.Equals(0.0f))
+        {
+            PlayerManager.Instance.PlayerKnockback(_target.gameObject.GetInstanceID(), _forcePoint, SkillManager.Instance.GetSkillData(_id).knockBackDistance);
+        }
+
+        //확률에 따라 부가효과 적용
         if (SkillManager.Instance.GetSkillData(_id).chanceOfEffect.Equals(100.0f) || Random.Range(0.0f, 1.0f) < SkillManager.Instance.GetSkillData(_id).chanceOfEffect)
         {
             switch (SkillManager.Instance.GetSkillData(_id).effectType)
@@ -40,12 +53,6 @@ public class CalculationJudgmentEffect : MonoBehaviour
                     break;
             }
         }
-
-        //확률과 별개로 넉백은 적용
-        if (!SkillManager.Instance.GetSkillData(_id).knockBackDistance.Equals(0.0f))        
-        {
-            PlayerManager.Instance.PlayerKnockback(_target.gameObject.GetInstanceID(), _forcePoint, SkillManager.Instance.GetSkillData(_id).knockBackDistance);
-        }
     }
     
     //요청받은 타겟(다수)에 관한 효과 적용여부 판단 (확률적용)
@@ -53,8 +60,23 @@ public class CalculationJudgmentEffect : MonoBehaviour
     //이후 효과가 대부분 구현되고, switch구문이 필요없다고 판단 될 경우 구문 삭제 예정
     public void CalculationJudgment(int _id, int _casterInstanceID, List<Collider2D> _targetList, Vector3 _forcePoint)
     {
+
+
         for (int i = 0; i < _targetList.Count; i++)
         {
+            //확률과 별개로 DamageAmount만큼 데미지 적용
+            if (!SkillManager.Instance.GetSkillData(_id).damageAmount.Equals(0.0f))
+            {
+                PlayerManager.Instance.PlayerDamage(_id, _casterInstanceID, _targetList[i].gameObject.GetInstanceID());
+            }
+
+            //확률과 별개로 넉백은 적용
+            if (!SkillManager.Instance.GetSkillData(_id).knockBackDistance.Equals(0.0f))
+            {
+                PlayerManager.Instance.PlayerKnockback(_targetList[i].gameObject.GetInstanceID(), _forcePoint, SkillManager.Instance.GetSkillData(_id).knockBackDistance);
+            }
+
+            //확률에 따라 부가효과 적용
             if (SkillManager.Instance.GetSkillData(_id).chanceOfEffect.Equals(100.0f) || Random.Range(0.0f, 1.0f) < SkillManager.Instance.GetSkillData(_id).chanceOfEffect)
             {
                 switch (SkillManager.Instance.GetSkillData(_id).effectType)
@@ -71,12 +93,6 @@ public class CalculationJudgmentEffect : MonoBehaviour
                     default:
                         break;
                 }
-            }
-
-            //확률과 별개로 넉백은 적용
-            if(!SkillManager.Instance.GetSkillData(_id).knockBackDistance.Equals(0.0f))
-            {
-                PlayerManager.Instance.PlayerKnockback(_targetList[i].gameObject.GetInstanceID(), _forcePoint, SkillManager.Instance.GetSkillData(_id).knockBackDistance);
             }
         }
     }

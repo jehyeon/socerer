@@ -23,7 +23,7 @@ public class SkillManager : MonoBehaviour
             return mInstance;
         }
     }
-    public void Start()
+    public void Awake()
     {
         _skillDataBase = GetComponent<SkillDataBase>();
         _projectilePoolMgr = GetComponentInChildren<ProjectilePoolMgr>();

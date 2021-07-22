@@ -13,13 +13,17 @@ public class PlayerCtrl : MonoBehaviour
 
 
     [Header("더미모드")]
-    [SerializeField] bool dummyMode;
+    [SerializeField] bool _dummyMode;
+    public bool dummyMode { get => _dummyMode; }
 
     [Header("Required Component")]
     [SerializeField] PlayerAnimationController _playerAnimationController;
     [SerializeField] PlayerAction _playerAction;
     [SerializeField] PlayerAim _playerAim;
     [SerializeField] PlayerStatus _playerStatus;
+
+    //상태관련
+    private bool _canUseCastSKill;
 
 
     //내부변수
@@ -45,6 +49,7 @@ public class PlayerCtrl : MonoBehaviour
 
         _statusNormal = StatusNormal.IDLE;
         isNormalFSM = true;
+        _canUseCastSKill = true;
         StartCoroutine(NormalFSM());
 
         goalPointOfKnockBack = Vector3.zero;
@@ -54,36 +59,7 @@ public class PlayerCtrl : MonoBehaviour
             _playerAim.gameObject.SetActive(false);
         }
     }
-
-    private void Update()
-    {
-        if(!dummyMode)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                _playerAction.UseSkill(110100);
-            }
-            if (Input.GetMouseButtonDown(1))
-            {
-                _playerAction.UseSkill(120100);
-            }
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _playerAction.UseSkill(210100);
-                //임시로 센터포지션 잡아보자
-                //_playerAction.Teleport(_playerAim.mousePosition - new Vector3(0.0f, 0.12f));
-            }
-            if (Input.GetKeyDown(KeyCode.V))
-            {
-                _playerAction.UseSkill(110200);
-                //임시로 센터포지션 잡아보자
-                //_playerAction.Teleport(_playerAim.mousePosition - new Vector3(0.0f, 0.12f));
-            }
-        }
-    }
-
-
-
+       
 
     //Player FSM 구현
     IEnumerator NormalFSM()
@@ -162,6 +138,7 @@ public class PlayerCtrl : MonoBehaviour
                     case StatusNormal.USESKILL:
                         break;
                     case StatusNormal.KNOCKBACK:
+                        _canUseCastSKill = false;
                         break;
                     default:
                         break;
@@ -189,6 +166,7 @@ public class PlayerCtrl : MonoBehaviour
             case StatusNormal.KNOCKBACK:
                 goalPointOfKnockBack = Vector3.zero;
                 knockBackStack = 0;
+                _canUseCastSKill = true;
                 break;
             default:
                 break;
@@ -227,6 +205,19 @@ public class PlayerCtrl : MonoBehaviour
                 knockBackStack++;
             }
             SetNormalFSM(StatusNormal.KNOCKBACK);
+        }
+    }
+
+    public bool UseSkill(int _id)
+    {
+        if(_canUseCastSKill)
+        {
+            _playerAction.UseSkill(_id);
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

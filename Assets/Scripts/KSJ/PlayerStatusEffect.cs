@@ -15,8 +15,6 @@ public class PlayerStatusEffect : MonoBehaviour
     [Range(0.1f, 1.0f)]
     [SerializeField] float applyTerm;
 
-
-
     [Header("Required Component")]
     [SerializeField] PlayerStatus _playerStatus;
     private void Start()
@@ -198,6 +196,7 @@ public class Slow : StatusEffect
     {
         if (_playerStatus.nowDecreaseMoveSpeed < effectAmount)
         {
+            _active = true;
             _playerStatus.DecreaseMoveSpeed(effectAmount);
         }
     }

@@ -8,7 +8,7 @@ public class PlayerAction : MonoBehaviour
 
     float decreaseKnockBackSpeed = 0.5f;
 
-    [Header("Required Child Component")]
+    [Header("Required Component")]
     [SerializeField] PlayerCtrl _playerCtrl;
 
     [Header("Required Child Component")]
@@ -57,12 +57,12 @@ public class PlayerAction : MonoBehaviour
         switch(SkillManager.Instance.GetSkillData(_skillID).areaPivot)
         {
             case SkillAreaPivot.Player:
-                SkillManager.Instance.UseSkill(_skillID, gameObject.GetInstanceID(), _playerAim.GetAimTransform());
+                SkillManager.Instance.UseSkill(_skillID, gameObject.GetInstanceID(), _playerAim.GetCenterTransform());
                 break;
             case SkillAreaPivot.Ground:
                 tempVector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 tempVector.z = 0.0f;
-                SkillManager.Instance.UseSkill(_skillID, gameObject.GetInstanceID(), tempVector, _playerAim.GetAimTransform().rotation);
+                SkillManager.Instance.UseSkill(_skillID, gameObject.GetInstanceID(), _playerAim.GetAimPosition(), _playerAim.GetCenterTransform().rotation);
                 break;
             default:
                 break;      
