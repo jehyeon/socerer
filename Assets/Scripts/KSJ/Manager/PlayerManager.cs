@@ -20,7 +20,7 @@ public struct PlayerInpormation
     public PlayerStatusEffect playerStatusEffect { get => _playerStatusEffect; }
 
 
-    public void SetPlayerInformation(GameObject _gameObject)
+    public PlayerInpormation(GameObject _gameObject)
     {
         _playerGameObject = _gameObject;
         _playerInstanceID = _playerGameObject.GetInstanceID();
@@ -41,10 +41,7 @@ public struct PlayerInpormation
 
 public class PlayerManager : MonoBehaviour
 {
-
     private Dictionary<int, PlayerInpormation> playerdic = new Dictionary<int, PlayerInpormation>();
-
-    private PlayerInpormation temp;
 
     private static PlayerManager mInstance;
     public static PlayerManager Instance
@@ -59,19 +56,13 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-
-    // Start is called before the first frame update
     void Start()
     {
         //더미를 찾기위해 임시로 만듬. 
-        var tempPlayerArray = GameObject.FindObjectsOfType<PlayerAction>();
+        var tempPlayerArray = GameObject.FindObjectsOfType<PlayerCtrl>();
         for(int i = 0; i < tempPlayerArray.Length; i++)
         {
-            temp.Clear();
-            temp.SetPlayerInformation(tempPlayerArray[i].gameObject);
-
-            playerdic.Add(temp.playerInstanceID, temp);
-
+            playerdic.Add(tempPlayerArray[i].gameObject.GetInstanceID(), new PlayerInpormation(tempPlayerArray[i].gameObject));
         }
     }
 
@@ -93,6 +84,10 @@ public class PlayerManager : MonoBehaviour
         playerdic[_playerInstanceID].PlayerCtrl.KnockBack(_pointOfForce, _distance);
     }
 
+    public void PlayerDamage(int _id, int _casterInstanceID, int _playerInstanceID)
+    {
+        playerdic[_playerInstanceID].playerStatusEffect.Damage(_casterInstanceID, SkillManager.Instance.GetSkillData(_id).damageAmount);
+    }
 
     //EffectType에 따라 요청받은 Player의 PlayerStatusEffect에 효과 적용 요청
     //추후 Log 생성을 위해 casterIntanceID도 같이 전달

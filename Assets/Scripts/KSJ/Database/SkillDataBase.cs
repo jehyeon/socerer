@@ -9,6 +9,7 @@ public struct SkillData
     private string _nameKor;
     private SkillElemental _elemental;
     private SkillType _type;
+    private float _range;
     private float _stiffTime;
     private float _judgmentDelay;
     private float _coolTime;
@@ -18,6 +19,7 @@ public struct SkillData
     private float _length;
     private float _width;
     private LayerEnum _judgmentLayer;
+    private float _damageAmount;
     private float _chanceOfEffect;
     private SkillEffectType _effectType;
     private float _effectPower;
@@ -31,6 +33,7 @@ public struct SkillData
     public string nameKor { get => _nameKor; }
     public SkillElemental elemental { get => _elemental; }
     public SkillType type { get => _type; }
+    public float range { get => _range; }
     public float stiffTime { get => _stiffTime; }
     public float judgmentDelay { get => _judgmentDelay; }
     public float coolTime { get => _coolTime; }
@@ -40,6 +43,7 @@ public struct SkillData
     public float length { get => _length; }
     public float width { get => _width; }
     public LayerEnum judgmentLayer { get => _judgmentLayer; }
+    public float damageAmount { get => _damageAmount; }
     public float chanceOfEffect { get => _chanceOfEffect; }
     public SkillEffectType effectType { get => _effectType; }
     public float effectPower { get => _effectPower; }
@@ -53,30 +57,27 @@ public struct SkillData
         _id = (int)_skillData["ID"];
         _nameEng = _skillData["Name_Eng"].ToString();
         _nameKor = _skillData["Name_Kor"].ToString();
+
         _elemental = (SkillElemental)System.Enum.Parse(typeof(SkillElemental), _skillData["Elemental"].ToString());
         _type = (SkillType)System.Enum.Parse(typeof(SkillType), _skillData["Type"].ToString());
-        _stiffTime = (float)_skillData["StiffTime"];
-        _judgmentDelay = (float)_skillData["JudgmentDelay"];
-        _coolTime = (float)_skillData["CoolTime"];
 
-        if (!_skillData["KnockBackDistance"].ToString().Equals("-"))
-        {
-            _knockBackDistance = (float)_skillData["KnockBackDistance"];
-        }
+        SetValue(ref _range, _skillData["Range"]);
+        SetValue(ref _stiffTime, _skillData["StiffTime"]);
+        SetValue(ref _judgmentDelay, _skillData["JudgmentDelay"]);
+        SetValue(ref _coolTime, _skillData["CoolTime"]);
+        Debug.Log(_coolTime);
+        SetValue(ref _knockBackDistance, _skillData["KnockBackDistance"]);
+
         _areaPivot = (SkillAreaPivot)System.Enum.Parse(typeof(SkillAreaPivot), _skillData["AreaPivot"].ToString());
 
         if(!_skillData["AreaForm"].ToString().Equals("-"))
         {
             _areaForm = (SkillAreaForm)System.Enum.Parse(typeof(SkillAreaForm), _skillData["AreaForm"].ToString());
         }
-        if (!_skillData["Length"].ToString().Equals("-"))
-        {
-            _length = (float)_skillData["Length"];
-        }
-        if (!_skillData["Width"].ToString().Equals("-"))
-        {
-            _width = (float)_skillData["Width"];
-        }
+
+        SetValue(ref _length, _skillData["Length"]);
+        SetValue(ref _width, _skillData["Width"]);
+
         if (!_skillData["JudgmentLayer"].ToString().Equals("-"))
         {
             _judgmentLayer = (LayerEnum)System.Enum.Parse(typeof(LayerEnum), _skillData["JudgmentLayer"].ToString());
@@ -86,26 +87,34 @@ public struct SkillData
             _judgmentLayer = LayerEnum.Null;
         }
 
-        _chanceOfEffect = (float)_skillData["ChanceOfEffect"];
+        SetValue(ref _damageAmount, _skillData["DamageAmount"]);
+        SetValue(ref _chanceOfEffect, _skillData["ChanceOfEffect"]);
+
         _effectType = (SkillEffectType)System.Enum.Parse(typeof(SkillEffectType), _skillData["EffectType"].ToString());
 
-        if (!_skillData["EffectPower"].ToString().Equals("-"))
-        {
-            _effectPower = (float)_skillData["EffectPower"];
-        }
+        SetValue(ref _effectPower, _skillData["EffectPower"]);
+        SetValue(ref _effectDuration, _skillData["EffectDuration"]);
+        SetValue(ref _linkSkillID, _skillData["LinkSkillID"]);
 
-        if (!_skillData["EffectDuration"].ToString().Equals("-"))
-        {
-            _effectDuration = (float)_skillData["EffectDuration"];
-        }
-
-        if (!_skillData["LinkSkillID"].ToString().Equals("-"))
-        {
-            _linkSkillID = (int)_skillData["LinkSkillID"];
-        }
         //_prefab = Resources.Load(_skillData["Prefab"].ToString()) as GameObject;
         return this;
     }
+
+    private void SetValue(ref int _variableName, object _dataName)
+    {
+        if (!_dataName.ToString().Equals("-"))
+        {
+            _variableName = (int)_dataName;
+        }
+    }
+    private void SetValue(ref float _variableName, object _dataName)
+    {
+        if (!_dataName.ToString().Equals("-"))
+        {
+            _variableName = (float)_dataName;
+        }
+    }
+
 }
 
 public class SkillDataBase : MonoBehaviour

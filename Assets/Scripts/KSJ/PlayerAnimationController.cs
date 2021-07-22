@@ -48,7 +48,6 @@ public class PlayerAnimationController : MonoBehaviour
     //플레이어의 Material에 설정된 Color값을 조절
     public void SetPlayerColor(Color _color)
     {
-        Debug.Log(_spriteRenderer.gameObject.name);
         _spriteRenderer.material.SetColor("_Color", _color);
     }
 
