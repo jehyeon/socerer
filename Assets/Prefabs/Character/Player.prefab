@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7215415285973839146}
-  - component: {fileID: 1923292073960054368}
+  - component: {fileID: 5049096477834073498}
   - component: {fileID: 4222702931209168639}
   - component: {fileID: 7190125412746066099}
   m_Layer: 7
@@ -117,7 +117,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1923292073960054368
+--- !u!114 &5049096477834073498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  _spriteRenderer: {fileID: 0}
   _speed: 1
 --- !u!114 &4222702931209168639
 MonoBehaviour:
