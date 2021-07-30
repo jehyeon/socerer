@@ -1,3 +1,4 @@
+using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public enum KeyFunction
     Left, Right, Up, Down, SkillAttack1, SkillAttack2, SkillMove, SkillSpecial, Null = 99
 }
 
-public class InputManager : MonoBehaviour
+public class InputManager : NetworkBehaviour
 {    
     private KeyCode[] _keyArray = new KeyCode[8];
 
@@ -43,7 +44,10 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        CalculateInputVector();            
+        if (isLocalPlayer)
+        {
+            CalculateInputVector();
+        }
     }
 
     private void CalculateInputVector()
