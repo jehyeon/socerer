@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class Player : NetworkBehaviour
 {
+
     public float _speed = 1;
     private Vector2 _inputVector = new Vector2();
     private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
     private void HandleMovement()
     {
         if (isLocalPlayer)
@@ -40,6 +42,15 @@ public class Player : NetworkBehaviour
             {
                 _inputVector *= 0.7071f;
             }
+            // 애니메이션
+            if (_inputVector.x != 0 || _inputVector.y != 0)
+            {
+                _animator.SetBool("isRun", true);
+            } 
+            else
+            {
+                _animator.SetBool("isRun", false);
+            }
 
             transform.Translate(_inputVector * _speed * Time.deltaTime);
         }
@@ -47,7 +58,8 @@ public class Player : NetworkBehaviour
 
     private void Awake()
     {
-        _spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        _spriteRenderer = transform.GetComponent<SpriteRenderer>();
+        _animator = transform.GetComponent<Animator>();
     }
     void Update()
     {

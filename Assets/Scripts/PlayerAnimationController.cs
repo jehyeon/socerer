@@ -14,8 +14,7 @@ public class PlayerAnimationController : MonoBehaviour
         _animator = transform.GetComponentInChildren<Animator>();
         _spriteRenderer = transform.GetComponentInChildren<SpriteRenderer>();
     }
-
-    //요청받은 상태 별 애니메이션 설정 및 출력
+    
     public void SetAnimation(PlayerCtrl.StatusNormal _statue, bool _value)
     {
         switch(_statue)
@@ -32,7 +31,6 @@ public class PlayerAnimationController : MonoBehaviour
         }
     }
 
-    //해당 상태와 연관된 애니메이션의 속도를 조절
     public void SetAnimationSpeed(PlayerCtrl.StatusNormal _state, float _speed)
     {
         switch(_state)
@@ -45,7 +43,6 @@ public class PlayerAnimationController : MonoBehaviour
         }
     }
 
-    //플레이어의 Material에 설정된 Color값을 조절
     public void SetPlayerColor(Color _color)
     {
         _spriteRenderer.material.SetColor("_Color", _color);
