@@ -7,6 +7,7 @@ public class Player : NetworkBehaviour
 {
     public float _speed = 1;
     private Vector2 _inputVector = new Vector2();
+    private SpriteRenderer _spriteRenderer;
     private void HandleMovement()
     {
         if (isLocalPlayer)
@@ -20,7 +21,8 @@ public class Player : NetworkBehaviour
             if(Input.GetKey(KeyCode.A))
             {
                 _inputVector.x -= 1.0f;
-                transform.localScale = new Vector3(-1, 1, 1); // 왼쪽 방향으로 이동 시 좌우 반전
+                _spriteRenderer.flipX = true;
+                CmdProvideFlipStateToServer(true);
             }
             if(Input.GetKey(KeyCode.S))
             {
@@ -29,7 +31,8 @@ public class Player : NetworkBehaviour
             if(Input.GetKey(KeyCode.D))
             {
                 _inputVector.x += 1.0f;
-                transform.localScale = new Vector3(1, 1, 1); // 오른쪽 방향으로 이동 시 좌우 반전
+                _spriteRenderer.flipX = false;
+                CmdProvideFlipStateToServer(false);
             }
             
             // 대각선 이동
@@ -42,14 +45,13 @@ public class Player : NetworkBehaviour
         }
     }
 
+    private void Awake()
+    {
+        _spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+    }
     void Update()
     {
         HandleMovement();
-        if (isLocalPlayer && Input.GetKeyDown(KeyCode.X))
-        {
-            Debug.Log("Sending Hola to server");
-            Hola();
-        }
     }
 
     public override void OnStartServer()
@@ -57,10 +59,16 @@ public class Player : NetworkBehaviour
         Debug.Log("Player has been spawned on the server");
     }
 
-    // temporary
     [Command]
-    void Hola()
+    void CmdProvideFlipStateToServer(bool state)
     {
-        Debug.Log("Received Hola from client");
+        // 모든 client에 flipState를 보냄
+        RpcSendFlipState(state);
+    }
+
+    [ClientRpc]
+    void RpcSendFlipState(bool state)
+    {
+        _spriteRenderer.flipX = state;
     }
 }
